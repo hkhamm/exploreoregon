@@ -1,0 +1,13 @@
+<script>
+{%if form.errors%}
+
+    window.parent.display_form_errors('form.add_comment', {
+        '#comment_name': '{{form.name.errors|safe}}',
+        '#comment': '{{form.body.errors|safe}}',
+    });
+
+
+{%else%}
+    window.parent.display_form_success('form.add_comment');
+{%endif%}
+</script>

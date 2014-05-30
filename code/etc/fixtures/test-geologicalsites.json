@@ -1,0 +1,102 @@
+[
+{
+  "pk": 1, 
+  "model": "mnch.geologicalsite", 
+  "fields": {
+    "category": null, 
+    "updated_by": null, 
+    "created_at": "2013-08-21T22:16:43Z", 
+    "description": "<p><strong>Crater Lake National Park</strong>&nbsp;is a&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/United_States_National_Park\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"United States National Park\">United States National Park</a>&nbsp;located in&nbsp;<a href=\"http://en.wikipedia.org/wiki/Southern_Oregon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Southern Oregon\">southern Oregon</a>. Established in 1902, Crater Lake National Park is the fifth oldest national park in the&nbsp;<a href=\"http://en.wikipedia.org/wiki/United_States\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"United States\">United States</a>&nbsp;and the only one in the state of<a href=\"http://en.wikipedia.org/wiki/Oregon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Oregon\">Oregon</a>.<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-nps-3\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; white-space: nowrap; background-position: initial initial; background-repeat: initial initial;\">[3]</a>&nbsp;The park encompasses the&nbsp;<a href=\"http://en.wikipedia.org/wiki/Caldera\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Caldera\">caldera</a>&nbsp;of&nbsp;<a href=\"http://en.wikipedia.org/wiki/Crater_Lake\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Crater Lake\">Crater Lake</a>, a remnant of a destroyed&nbsp;<a href=\"http://en.wikipedia.org/wiki/Volcano\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Volcano\">volcano</a>,&nbsp;<a href=\"http://en.wikipedia.org/wiki/Mount_Mazama\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Mount Mazama\">Mount Mazama</a>, and the surrounding hills and forests.</p>\r\n\r\n<p>The lake is 1,943 feet (592&nbsp;m) deep at its deepest point,<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-deepest-4\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; white-space: nowrap; background-position: initial initial; background-repeat: initial initial;\">[4]</a>&nbsp;which makes it the deepest lake in the United States, the second deepest in North America and the&nbsp;<a href=\"http://en.wikipedia.org/wiki/List_of_lakes_by_depth\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"List of lakes by depth\">ninth deepest</a>&nbsp;in the world.<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-deepest-4\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; white-space: nowrap; background-position: initial initial; background-repeat: initial initial;\">[4]</a>&nbsp;Crater Lake is often referred to as the seventh deepest lake in the world, but this former listing excludes the approximately 3,000-foot (910&nbsp;m) depth of subglacial&nbsp;<a href=\"http://en.wikipedia.org/wiki/Lake_Vostok\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Lake Vostok\">Lake Vostok</a>&nbsp;in Antarctica, which resides under nearly 13,000 feet (4,000&nbsp;m) of ice, and the recent report of a 2,740-foot (840&nbsp;m) maximum depth for&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Lake_O%27Higgins\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Lake O'Higgins\">Lake O&#39;Higgins</a>/San Martin, located on the border of Chile and Argentina. However, when comparing its average depth of 1,148 feet (350&nbsp;m) to the average depth of other deep lakes, Crater Lake becomes the deepest in the Western Hemisphere and the third deepest in the world. The impressive average depth of this volcanic lake is due to the nearly symmetrical 4,000-foot (1,200&nbsp;m) deep caldera formed 7,700 years ago during the violent climactic eruptions and subsequent collapse of Mount Mazama and the relatively moist climate that is typical of the crest of the&nbsp;<a href=\"http://en.wikipedia.org/wiki/Cascade_Range\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Cascade Range\">Cascade Range</a>.</p>\r\n\r\n<p>The caldera rim ranges in elevation from 7,000 to 8,000 feet (2,100 to 2,400 m). The&nbsp;<a href=\"http://en.wikipedia.org/wiki/United_States_Geological_Survey\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"United States Geological Survey\">United States Geological Survey</a>&nbsp;benchmarked elevation of the lake surface itself is 6,178 feet (1,883&nbsp;m). This National Park encompasses 183,225 acres (286.29&nbsp;sq&nbsp;mi; 741.49&nbsp;km2).<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-area-1\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; white-space: nowrap; background-position: initial initial; background-repeat: initial initial;\">[1]</a>&nbsp;Crater Lake has no streams flowing into or out of it. All water that enters the lake is eventually lost from evaporation or subsurface seepage. The lake&#39;s water commonly has a striking blue hue, and the lake is re-filled entirely from direct precipitation in the form of snow and rain.</p>", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:21:17Z", 
+    "created_by": null, 
+    "longitude": -122.854614257812, 
+    "latitude": 43.8939340141119, 
+    "name": "Crater Lake National Park"
+  }
+},
+{
+  "pk": 2, 
+  "model": "mnch.geologicalsite", 
+  "fields": {
+    "category": null, 
+    "updated_by": null, 
+    "created_at": "2013-08-21T22:18:25Z", 
+    "description": "<p><strong>John Day Fossil Beds National Monument</strong>&nbsp;is a&nbsp;<a href=\"http://en.wikipedia.org/wiki/National_Monument_(United_States)\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"National Monument (United States)\">U.S. National Monument</a>&nbsp;in&nbsp;<a href=\"http://en.wikipedia.org/wiki/Wheeler_County,_Oregon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Wheeler County, Oregon\">Wheeler</a>&nbsp;and&nbsp;<a href=\"http://en.wikipedia.org/wiki/Grant_County,_Oregon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Grant County, Oregon\">Grant</a>&nbsp;counties in east-central&nbsp;<a href=\"http://en.wikipedia.org/wiki/Oregon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Oregon\">Oregon</a>. Located within the&nbsp;<a href=\"http://en.wikipedia.org/wiki/John_Day_River\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"John Day River\">John Day River</a>&nbsp;basin and managed by the&nbsp;<a href=\"http://en.wikipedia.org/wiki/National_Park_Service\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"National Park Service\">National Park Service</a>, the park is known for its well-preserved layers of&nbsp;<a href=\"http://en.wikipedia.org/wiki/Fossil\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Fossil\">fossil</a>&nbsp;plants and&nbsp;<a href=\"http://en.wikipedia.org/wiki/Mammal\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Mammal\">mammals</a>&nbsp;that lived in the region between the late&nbsp;<a href=\"http://en.wikipedia.org/wiki/Eocene\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Eocene\">Eocene</a>, about 44&nbsp;million years ago, and the late&nbsp;<a href=\"http://en.wikipedia.org/wiki/Miocene\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Miocene\">Miocene</a>, about 7&nbsp;million years ago. The monument consists of three geographically separate units: Sheep Rock, Painted Hills, and Clarno.</p>\r\n\r\n<p>The units cover a total of 13,944 acres (5,643&nbsp;ha) of semi-desert shrublands,&nbsp;<a href=\"http://en.wikipedia.org/wiki/Riparian_zone\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Riparian zone\">riparian zones</a>, and colorful<a href=\"http://en.wikipedia.org/wiki/Badlands\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Badlands\">badlands</a>. About 125,000 people visit the park each year for outdoor activities such as hiking and sightseeing or to visit the Thomas Condon Paleontology Center or the&nbsp;<a href=\"http://en.wikipedia.org/wiki/James_Cant_Ranch_Historic_District\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"James Cant Ranch Historic District\">James Cant Ranch Historic District</a>.</p>\r\n\r\n<p>Before the arrival of Euro-Americans in the 19th&nbsp;century, the John Day basin was frequented by&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Sahaptin_people\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Sahaptin people\">Sahaptin people</a>&nbsp;who hunted, fished, and gathered roots and berries in the region. After road-building made the valley more accessible, settlers established farms, ranches, and a few small towns along the river and its tributaries.&nbsp;<a href=\"http://en.wikipedia.org/wiki/Paleontology\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Paleontology\">Paleontologists</a>&nbsp;have been unearthing and studying the fossils in the region since 1864, when<a href=\"http://en.wikipedia.org/wiki/Thomas_Condon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Thomas Condon\">Thomas Condon</a>, a missionary and amateur geologist, recognized their importance and made them known globally. Parts of the basin became a National Monument in 1975.</p>\r\n\r\n<p>Averaging about 2,200 feet (670&nbsp;m) in elevation, the monument has a dry climate with temperatures that vary from summer highs of about&nbsp;90 &deg;F&nbsp;(32&nbsp;&deg;C)&nbsp;to winter lows below freezing. The monument has more than 80 soil types that support a wide variety of flora, ranging from willow trees near the river to grasses on&nbsp;<a href=\"http://en.wikipedia.org/wiki/Alluvial_fan\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Alluvial fan\">alluvial fans</a>&nbsp;to cactus among rocks at higher elevations. Fauna include more than 50 species of resident and migratory birds. Large mammals like&nbsp;<a href=\"http://en.wikipedia.org/wiki/Elk\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Elk\">elk</a>&nbsp;and smaller animals such as&nbsp;<a href=\"http://en.wikipedia.org/wiki/Raccoon\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Raccoon\">raccoons</a>,&nbsp;<a href=\"http://en.wikipedia.org/wiki/Coyote\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Coyote\">coyotes</a>, and&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Voles\" style=\"text-decoration: none; color: rgb(11, 0, 128); background-image: none; background-position: initial initial; background-repeat: initial initial;\" title=\"Voles\">voles</a>&nbsp;frequent these units, which are also populated by a wide variety of reptiles, fish, butterflies, and other creatures adapted to particular niches of a mountainous semi-desert terrain.</p>\r\n\r\n<div>&nbsp;</div>", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:19:55Z", 
+    "created_by": null, 
+    "longitude": -122.854614257812, 
+    "latitude": 43.8939340141119, 
+    "name": "John Day Fossil Beds"
+  }
+},
+{
+  "pk": 1, 
+  "model": "mnch.geologicalsitephoto", 
+  "fields": {
+    "status": "approved", 
+    "updated_by": null, 
+    "photo": "geologicalsitephoto/edc2a49b9e0d75a67a801a82c388ead5.png", 
+    "created_at": "2013-08-21T22:19:55Z", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:19:55Z", 
+    "created_by": null, 
+    "site": 2, 
+    "credits": "", 
+    "position": 99, 
+    "name": ""
+  }
+},
+{
+  "pk": 2, 
+  "model": "mnch.geologicalsitephoto", 
+  "fields": {
+    "status": "approved", 
+    "updated_by": null, 
+    "photo": "geologicalsitephoto/cefd0fba085bb38e0f6540b0dcbde90f.png", 
+    "created_at": "2013-08-21T22:19:55Z", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:19:55Z", 
+    "created_by": null, 
+    "site": 2, 
+    "credits": "", 
+    "position": 99, 
+    "name": ""
+  }
+},
+{
+  "pk": 3, 
+  "model": "mnch.geologicalsitephoto", 
+  "fields": {
+    "status": "approved", 
+    "updated_by": null, 
+    "photo": "geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4_1.png", 
+    "created_at": "2013-08-21T22:21:17Z", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:21:17Z", 
+    "created_by": null, 
+    "site": 1, 
+    "credits": "", 
+    "position": 99, 
+    "name": ""
+  }
+},
+{
+  "pk": 4, 
+  "model": "mnch.geologicalsitephoto", 
+  "fields": {
+    "status": "approved", 
+    "updated_by": null, 
+    "photo": "geologicalsitephoto/4b21554690bb9e3316ac944ec6d10f9e_3.png", 
+    "created_at": "2013-08-21T22:21:17Z", 
+    "is_active": true, 
+    "updated_at": "2013-08-21T22:21:17Z", 
+    "created_by": null, 
+    "site": 1, 
+    "credits": "", 
+    "position": 99, 
+    "name": ""
+  }
+}
+]

@@ -1,0 +1,13 @@
+<script>
+{%if form.errors%}
+
+    window.parent.display_form_errors('form.add_photo', {
+        '#imageupload': '{{form.photo.errors|safe}}',
+        '#photo_name': '{{form.name.errors|safe}}',
+    }, '#submit-photo-success');
+
+
+{%else%}
+    window.parent.display_form_success('form.add_photo','#submit-photo-success'); 
+{%endif%}
+</script>

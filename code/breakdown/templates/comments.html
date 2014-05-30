@@ -1,0 +1,11 @@
+{%for comment in comments%}
+    <li>
+        <h4><span>By {{comment.name}}</span>{{comment.created_at.strftime("%b %d, %Y")}} {%if comment.num_likes > 0%}// {{comment.num_likes}} like{%if comment.num_likes > 1%}s{%endif%}{%endif%}</h4>
+        <aside class="like">
+            <p><a href="#" data-pk="{{comment.pk}}">Like</a></p>
+        </aside>
+        <p>{{comment.body}}</p>
+    </li>
+{%else%}
+    <li class="empty">No tips yet.</li>
+{%endfor%}

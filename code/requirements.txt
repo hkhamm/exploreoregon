@@ -1,0 +1,30 @@
+Django==1.5.2
+pytz==2013b
+south==0.8.1
+mysql-python==1.2.3
+
+
+# django libraries
+Jinja2==2.7
+git+ssh://git@github.com/concentricsky/jingo.git
+git+ssh://git@github.com/concentricsky/django-cachemodel.git@release/v2.0.0rc1
+git+ssh://git@github.com/concentricsky/django-basic-models.git@release/v2.0.0
+
+
+# website libraries [Aug 2013]
+git+ssh://git@github.com/concentricsky/django-sky-redirects.git@v0.8.1
+git+ssh://git@github.com/concentricsky/django-sky-visitor.git@v1.0.1
+git+ssh://git@github.com/concentricsky/django-sky-settings.git@v0.9.4
+git+ssh://git@github.com/concentricsky/django-app-log.git@v0.8.0
+
+
+# client admin [Feb 2014]
+git+ssh://git@github.com/concentricsky/django-client-admin.git@v1.0.9
+git+ssh://git@github.com/concentricsky/django-sky-ckeditor.git@v0.9.8
+git+ssh://git@github.com/concentricsky/django-skythumbnails.git@v0.2.5
+
+
+
+
+#git+ssh://git@github.com/concentricsky/django-skycms.git@v0.6.2
+

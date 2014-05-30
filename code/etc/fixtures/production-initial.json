@@ -1,0 +1,250 @@
+[
+{
+  "pk": 1, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "mapbox_api_key", 
+    "value": "barto457.map-khfqztb0", 
+    "setting_type": "s"
+  }
+},
+{
+  "pk": 2, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "default_location", 
+    "value": "44.04287, -123.06823", 
+    "setting_type": "s"
+  }
+},
+{
+  "pk": 3, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "session_timeout_soft", 
+    "value": "15", 
+    "setting_type": "n"
+  }
+},
+{
+  "pk": 4, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "session_timeout_hard", 
+    "value": "120", 
+    "setting_type": "n"
+  }
+},
+{
+  "pk": 5, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "allow_kiosk_commenting", 
+    "value": "1", 
+    "setting_type": "b"
+  }
+},
+{
+  "pk": 6, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "kiosk_ip_addressess", 
+    "value": "", 
+    "setting_type": "s"
+  }
+},
+{
+  "pk": 1, 
+  "model": "auth.group", 
+  "fields": {
+    "name": "Staff", 
+    "permissions": [
+      [
+        "add_applog", 
+        "app_log", 
+        "applog"
+      ], 
+      [
+        "add_user", 
+        "auth", 
+        "user"
+      ], 
+      [
+        "change_user", 
+        "auth", 
+        "user"
+      ], 
+      [
+        "delete_user", 
+        "auth", 
+        "user"
+      ], 
+      [
+        "add_bookmark", 
+        "client_admin", 
+        "bookmark"
+      ], 
+      [
+        "change_bookmark", 
+        "client_admin", 
+        "bookmark"
+      ], 
+      [
+        "delete_bookmark", 
+        "client_admin", 
+        "bookmark"
+      ], 
+      [
+        "add_dashboardpreferences", 
+        "client_admin", 
+        "dashboardpreferences"
+      ], 
+      [
+        "change_dashboardpreferences", 
+        "client_admin", 
+        "dashboardpreferences"
+      ], 
+      [
+        "delete_dashboardpreferences", 
+        "client_admin", 
+        "dashboardpreferences"
+      ], 
+      [
+        "add_geologicalcategory", 
+        "mnch", 
+        "geologicalcategory"
+      ], 
+      [
+        "change_geologicalcategory", 
+        "mnch", 
+        "geologicalcategory"
+      ], 
+      [
+        "delete_geologicalcategory", 
+        "mnch", 
+        "geologicalcategory"
+      ], 
+      [
+        "add_geologicalsite", 
+        "mnch", 
+        "geologicalsite"
+      ], 
+      [
+        "change_geologicalsite", 
+        "mnch", 
+        "geologicalsite"
+      ], 
+      [
+        "delete_geologicalsite", 
+        "mnch", 
+        "geologicalsite"
+      ], 
+      [
+        "add_geologicalsitecomment", 
+        "mnch", 
+        "geologicalsitecomment"
+      ], 
+      [
+        "change_geologicalsitecomment", 
+        "mnch", 
+        "geologicalsitecomment"
+      ], 
+      [
+        "delete_geologicalsitecomment", 
+        "mnch", 
+        "geologicalsitecomment"
+      ], 
+      [
+        "add_geologicalsitephoto", 
+        "mnch", 
+        "geologicalsitephoto"
+      ], 
+      [
+        "change_geologicalsitephoto", 
+        "mnch", 
+        "geologicalsitephoto"
+      ], 
+      [
+        "delete_geologicalsitephoto", 
+        "mnch", 
+        "geologicalsitephoto"
+      ], 
+      [
+        "add_geologicalsiteresource", 
+        "mnch", 
+        "geologicalsiteresource"
+      ], 
+      [
+        "change_geologicalsiteresource", 
+        "mnch", 
+        "geologicalsiteresource"
+      ], 
+      [
+        "delete_geologicalsiteresource", 
+        "mnch", 
+        "geologicalsiteresource"
+      ], 
+      [
+        "add_venue", 
+        "mnch", 
+        "venue"
+      ], 
+      [
+        "change_venue", 
+        "mnch", 
+        "venue"
+      ], 
+      [
+        "delete_venue", 
+        "mnch", 
+        "venue"
+      ], 
+      [
+        "add_volunteercategory", 
+        "mnch", 
+        "volunteercategory"
+      ], 
+      [
+        "change_volunteercategory", 
+        "mnch", 
+        "volunteercategory"
+      ], 
+      [
+        "delete_volunteercategory", 
+        "mnch", 
+        "volunteercategory"
+      ], 
+      [
+        "add_volunteeropportunity", 
+        "mnch", 
+        "volunteeropportunity"
+      ], 
+      [
+        "change_volunteeropportunity", 
+        "mnch", 
+        "volunteeropportunity"
+      ], 
+      [
+        "delete_volunteeropportunity", 
+        "mnch", 
+        "volunteeropportunity"
+      ], 
+      [
+        "add_setting", 
+        "sky_settings", 
+        "setting"
+      ], 
+      [
+        "change_setting", 
+        "sky_settings", 
+        "setting"
+      ], 
+      [
+        "delete_setting", 
+        "sky_settings", 
+        "setting"
+      ]
+    ]
+  }
+}
+]

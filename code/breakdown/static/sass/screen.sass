@@ -1,0 +1,1071 @@
+@import partials/base
+
+*
+	font-smoothing: antialiased
+	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
+
+// ::-webkit-scrollbar
+// 	display: none
+
+body
+	margin: 0
+	padding: 0
+	font-size: 15px
+	line-height: 1.6em
+	font-family: $body-font
+	color: $dkbrown
+	&.error
+		background: #8f351e
+		width: 500px
+		margin: 40px auto 0
+		text-align: left
+		color: #fff
+		h1.h2
+			margin-bottom: 40px
+			color: #fff
+		a
+			color: #fff
+			&:hover
+				color: $green
+
+h1, .h1
+	font-size: 74px
+	line-height: 1em
+	font-family: $headline-stack
+	text-transform: uppercase
+	color: rgba($white, .98)
+	+text-shadow(0 0 5px rgba(#333, .38))
+
+h2, .h2
+	font-size: 30px
+	line-height: 1em
+	font-family: $headline-stack
+	color: #8f341c
+	+transition(color .24s ease-in-out)
+
+h3, .h3
+	font-size: 30px
+	line-height: 1.618em
+	font-family: $headline-stack
+	color: $dkbrown
+
+p, ul, ol
+	margin-bottom: 15px
+
+header
+	position: fixed
+	bottom: 0
+	right: 0
+	z-index: 120
+	width: 430px
+	+pie-clearfix
+	h1
+		float: right
+		padding: 0 24px 10px 0
+
+@media screen and (max-width: $break-medium)
+	header
+		position: fixed
+		bottom: 85px
+		width: 430px
+		h1
+			font-size: 38px
+			padding: 0 15px 10px 0
+
+nav
+	position: fixed
+	bottom: 0
+	left: 15px
+	z-index: 120
+	width: 413px
+	padding: 20px 20px 0 20px
+	background: rgba($dkgray, .75)
+	+border-top-right-radius(24px)
+	+border-top-left-radius(24px)
+	+pie-clearfix
+	ul
+		float: left
+		width: 100%
+		+pie-clearfix
+		li
+			float: left
+			display: block
+			margin-right: 2%
+			width: 48%
+			&:last-child
+				margin-left: 2%
+				margin-right: 0
+			a
+				color: $orange
+				text-decoration: none
+				font-family: $headline-stack
+				font-size: 24px
+				padding: 15px 15px
+				height: 16px
+				line-height: 16px
+				display: block
+				background: rgba($dkbrown, .9)
+				color: rgba($tan, .24)
+				width: 86%
+				text-align: center
+				+transition(color .24s ease-in-out, background .24s ease-in-out)
+				+border-radius(24px)
+				+box-shadow(0 0 5px rgba(#333, .38))
+				&:active, &.active, &:hover
+					background: $orange
+					color: $white
+			&:last-child
+				margin-right: 0
+
+
+@media screen and (max-width: $break-medium)
+	nav
+		width: 334px
+		ul
+			li
+				a
+					font-size: 18px
+
+
+
+// Modal Container
+// ************************************************
+section#modal_container
+	width: 61%
+	max-width: 1500px
+	position: fixed
+	top: 24px
+	bottom: 98px
+	right: -75%
+	z-index: 200
+	background: $tan
+	opacity: .75
+	+box-shadow(0 0 10px #333)
+	+transition(right .24s ease-in-out, opacity .24s ease-in-out)
+	&.active
+		right: 24px
+		opacity: 1
+
+	article
+		width: 61%
+		overflow-y: scroll
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		+pie-clearfix
+		section.modal_header
+			width: 100%
+			height: 365px
+			overflow: hidden
+			position: relative
+			h2
+				position: absolute
+				bottom: 0
+				left: 0
+				padding: 10px 4% 15px
+				width: 92%
+				line-height: 61px
+				z-index: 120
+				// background: rgba($blue, .61)
+				color: $white
+			ul.tabs
+				display: none
+			a.prev, a.next
+				height: 40px
+				line-height: 43px
+				padding: 10px 10px 10px 40px
+				width: auto
+				display: block
+				background: url(images/icon_prev.png) 10px center rgba($blue, .38) no-repeat
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 120
+				cursor: pointer
+				font-family: $headline-stack
+				text-transform: uppercase
+				color: #fff
+				font-size: 1.6em
+				&:hover
+					background-color: rgba($blue, .98)
+			a.next
+				padding: 10px 40px 10px 10px
+				background: url(images/icon_next.png) 52px center rgba($blue, .38) no-repeat
+				left: auto
+				right: 2px
+			div.slide
+				display: block
+				+legacy-pie-clearfix
+				img
+					display: block
+					width: 100%
+					position: absolute
+					top: 0
+					left: 0
+				p
+					position: absolute
+					z-index: 100
+					color: $white
+					font-weight: bold
+					top: 20px
+					left: 110px
+
+			@media screen and (max-width: $break-large)
+				div.slides
+					img
+						width: auto
+						height: 100%
+
+		ul.venue
+			display: none
+
+
+		// Modal main content
+		// - - - - - - - - - -
+
+		section.content
+			padding: 25px 5%
+			color: $dkbrown
+			width: 90%
+			font-size: 18px
+			line-height: 24px
+			a
+				color: $blue !important
+				text-decoration: none
+				&:hover
+					color: $green !important
+			ul.resources li img
+				width: 15px
+				margin-right: 10px
+
+		// @media screen and (max-width: $break-large)
+		// 	section.content
+		// 		width: 92%
+		// 		float: none
+
+
+		// Modal sidebar content
+		// - - - - - - - - - -
+
+		aside
+			width: 80%
+			padding: 25px 5% 15px
+			margin: 0 5% 25px
+			background: rgba($white, .24)
+			position: relative
+			border: none
+			overflow: visible
+			h3
+				line-height: 1em
+				color: $blue
+
+			img.favicon
+				width: 16px
+				margin-right: 10px
+			a
+				color: $blue
+				text-decoration: none
+				font-size: 18px
+				+transition(color .24s ease-in-out)
+				&:hover
+					color: $green
+
+			form.add_photo
+				margin: 15px 0 0
+				+pie-clearfix
+				fieldset
+					width: auto
+					ol li
+						width: auto
+						+legacy-pie-clearfix
+						ul.errorlist
+							position: absolute
+							margin: 20px 0 0 22%
+							li
+								color: $orange
+						label
+							font-size: 18px
+							font-family: $headline-stack
+							margin-bottom: 5px
+							line-height: 18px
+							display: block
+							width: 25%
+							float: left
+						input[type="file"]
+							width: auto
+							margin: 0 0 15px 0
+							float: left
+						input[type="text"]
+							width: 65%
+							padding: 5px 8px
+							border: none
+							font-family: $headline-stack
+							font-size: 18px
+							color: $blue
+							margin-bottom: 15px
+							border: 2px solid lighten($dkbrown, 30%)
+							+box-shadow(0px 0px 4px lighten($dkbrown, 35%) inset)
+							float: left
+							&:focus
+								outline: none
+						input[type="submit"]
+							padding: 3px 8px
+							margin-top: 20px
+							+border-radius(24px)
+							border: none
+							background: $green
+							font-family: $headline-stack
+							color: $white
+							font-size: 24px
+							cursor: pointer
+							-webkit-appearance: none
+							&:hover
+								background: $blue
+
+		@media screen and (max-width: $break-small)
+			aside
+				form.add_photo fieldset ol li
+					label
+						float: none
+						width: 90%
+						display: block
+					input[type="text"]
+						float: none
+						width: 90%
+						display: block
+					ul.errorlist
+						position: absolute
+						margin: 20px 0 0 0
+						li
+							color: $orange
+
+
+
+	// Tip Header
+	// - - - - - - - - - -
+
+	section.tipheader
+		width: 36%
+		height: 90px
+		background: #3f4e4e
+		position: absolute
+		bottom: 0
+		right: 0
+		border-left: 2px solid #323f3f
+		border-top: 2px solid #323f3f
+		overflow: scroll
+		padding: 20px 1.5%
+		z-index: 80
+		+box-shadow(0 -3px 3px rgba(#323f3f, .38))
+		+legacy-pie-clearfix
+		overflow: visible
+		h2
+			color: rgba($white, .61)
+			font-size: 38px
+			text-transform: uppercase
+		h3
+			position: absolute
+			bottom: 15px
+			right: 15px
+			a
+				padding: 5px 10px
+				text-decoration: none
+				text-transform: uppercase
+				font-family: $headline-stack
+				font-size: 24px
+				color: rgba($white, .98)
+				background: rgba($green, .98)
+				+border-radius(24px)
+				+transition(color .24s ease-in-out, background .24s ease-in-out)
+				&:hover, &:active, &.active
+					background: $white
+					color: #323f3f
+
+		// Add comment form
+		// - - - - - - - - - -
+		form.add_comment
+			position: absolute
+			bottom: 119px
+			background: $dkgray
+			padding: 15px 5%
+			width: 91.1%
+			margin-left: -4.3%
+			display: none
+			border-top: 2px solid darken($dkgray, 20%)
+			&.active
+				display: block
+			ul.errorlist
+				margin: 0
+				li
+					color: $orange
+			label
+				font-family: $headline-stack
+				font-size: 18px
+				color: $white
+				margin-bottom: 5px
+				display: block
+				float: none
+				span
+					display: block
+					color: $orange
+			input
+				width: 45%
+				display: block
+				border: none
+				font-size: 18px
+				padding: 10px 2.5%
+				font-family: $headline-stack
+				background: $white
+				border: 2px solid lighten($ltgray, 25%)
+				+box-shadow(0 0 4px lighten($ltgray, 35%) inset)
+				color: $blue
+				margin-bottom: 24px
+				&:focus
+					outline: none
+			textarea
+				width: 95%
+				display: block
+				border: none
+				resize: none
+				min-height: 61px
+				font-size: 15px
+				padding: 10px 2.5%
+				font-family: $headline-stack
+				background: $white
+				border: 2px solid lighten($ltgray, 25%)
+				+box-shadow(0 0 4px lighten($ltgray, 35%) inset)
+				color: $blue
+				&:focus
+					outline: none
+			input[type="submit"]
+				border: none
+				background: $blue
+				color: $white
+				font-family: $headline-stack
+				font-size: 24px
+				padding: 8px 15px
+				margin-top: 24px
+				cursor: pointer
+				width: auto
+				display: block
+				+border-radius(24px)
+				box-shadow: none
+				-webkit-box-shadow: none
+				-moz-box-shadow: none
+				-webkit-appearance: none
+				+transition(color .24s ease-in-out, background .24s ease-in-out)
+				&:hover, &:active
+					background: $white
+					color: $dkgray
+			p
+				position: absolute
+				top: 4px
+				right: 0px
+				&.success-message
+					position: relative
+					top: auto
+					right: auto
+					color: #fff
+					padding: 24px
+					background: $orange
+					+border-radius(24px)
+					span
+						font-family: $headline-stack
+						font-size: 24px
+						display: block
+
+				a
+					color: $white
+					padding: 8px
+					background: darken($dkgray, 20%)
+					text-decoration: none
+					font-weight: bold
+					font-size: 18px
+					font-family: $headline-stack
+					text-transform: uppercase
+					+transition(color .24s ease-in-out)
+					&:hover
+						background: $orange
+						color: $white
+
+
+
+		// Filters
+		// - - - - - - - - - -
+
+		ul
+			// margin: 15px 0 0 0
+			position: absolute
+			bottom: 10px
+			left: 15px
+			+pie-clearfix
+			li
+				float: left
+				margin-right: 15px
+				&:last-child
+					margin: 0
+				a
+					padding: 5px 10px
+					text-decoration: none
+					text-transform: uppercase
+					font-family: $headline-stack
+					font-size: 24px
+					color: rgba($white, .98)
+					background: rgba(#333, .38)
+					+border-radius(24px)
+					+transition(color .24s ease-in-out, background .24s ease-in-out)
+					&:hover, &:active, &.active
+						background: $white
+						color: #333
+
+
+	// User comment list
+	// - - - - - - - - - -
+
+	aside.comments
+		width: 39%
+		background: #323f3f
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		border-left: 2px solid #323f3f
+		overflow-y: scroll
+		ul.user_comments
+			width: 100%
+			padding: 15px 0 110px
+			li
+				background: rgba($ltgray, 1)
+				width: 85%
+				padding: 15px 5% 20px
+				margin: 0 auto 15px
+				position: relative
+				color: $white
+				+box-shadow(0px 0px 4px darken(#323f3f, 5%))
+				&.empty
+					background: transparent
+					font-size: 38px
+					color: $ltgray
+					font-family: $headline-stack
+					box-shadow: none
+					-webkit-box-shadow: none
+					-moz-box-shadow: none
+				h4
+					font-size: 14px
+					margin-bottom: 15px
+					color: #323f3f
+					line-height: 1.2em
+					span
+						font-weight: bold
+						display: block
+
+
+				// Comment like button
+				// - - - - - - - - - -
+
+				aside.like
+					position: absolute
+					top: 0
+					right: 0
+					background: none
+					border: none
+					width: auto
+					overflow: visible
+					a
+						background: #004d78
+						color: $white
+						padding: 8px 15px
+						height: 24px
+						line-height: 24px
+						display: block
+						text-decoration: none
+						font-weight: bold
+						+transition(box-shadow .24s ease-in-out, background .24s ease-in-out)
+						+border-bottom-left-radius(24px)
+						&:hover
+							+box-shadow(0px 0px 3px 0 #323f3f)
+						&.liked
+							background: $green
+				p
+					margin: 0
+					font-size: 18px
+					line-height: 24px
+
+	&.volunteer-opportunity
+		width: 35%
+		article
+			width: 100%
+			section.modal_header
+				height: auto
+				overflow: visible
+				h2
+					position: relative
+					left: auto
+					bottom: 0
+					color: $blue
+					+text-shadow(none)
+					margin-top: 20px
+			section.slides-container
+				display: none
+			div.slides
+				display: none
+			img
+				width: 100%
+			ul.venue
+				padding: 0 5%
+				margin-bottom: 0
+				color: $dkbrown
+				width: 90%
+				font-size: 18px
+				line-height: 24px
+				display: block
+				li
+					font-weight: bold
+					color: $blue
+					span
+						color: $dkbrown
+						font-weight: normal
+			section.content
+				width: 90%
+			aside.content-sidebar
+				display: none
+		section.tipheader
+			display: none
+		aside.comments
+			display: none
+
+
+	@media screen and (max-width: $break-large)
+		aside
+			ul.user_comments
+				li
+					aside.like
+						top: 10px
+
+
+	// Close modal
+	// - - - - - - - - - -
+
+	p.modal_close
+		position: absolute
+		bottom: -59px
+		left: 0
+		a
+			padding: 15px
+			background: $blue
+			color: $white
+			font-family: $headline-stack
+			font-size: 24px
+			text-decoration: none
+			border-top: 2px solid #055f94
+			+transition(background .24s ease-in-out, border .24s ease-in-out)
+			&:hover, &:active
+				background: $green
+				border-top: 2px solid #5c8514
+
+
+@media screen and (max-width: $break-medium)
+	section#modal_container
+		width: 95%
+		top: 24px
+		right: -125%
+		&.active
+			right: 2.2%
+		article
+			section.modal_header
+				div.slides img
+					min-width: 100%
+					height: auto
+
+
+// Location List
+// ************************************************
+aside.listcontainer
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	z-index: 100
+	ul
+		padding: 38px 0 98px 81px
+		width: 300px
+		+background-image(linear-gradient(left, rgba(#000, .24), transparent))
+		li
+			display: block
+			width: 100%
+			position: relative
+			margin-bottom: 50px
+			text-align: center
+			&:last-child
+				border: none
+				margin-bottom: 0
+			h2
+				background: rgba($tan, 1)
+				padding: 10px 15px
+				width: 270px
+				display: inline-block
+				position: absolute
+				bottom: 24px
+				z-index: 100
+				+border-radius(24px)
+				+box-shadow(0 0 10px rgba(#333, .38))
+				+transition(background .24s ease-in-out, box-shadow .24s ease-in-out, color .24s ease-in-out)
+			img
+				width: 300px
+				height: 300px
+				position: relative
+				z-index: 80
+				+border-radius(100%)
+				+box-shadow(0 0 0 4px rgba($tan, 1), 0 0 15px rgba(#333, .8))
+				+transition(box-shadow .24s ease-in-out)
+			aside
+				position: absolute
+				bottom: 121px
+				right: 50px
+				height: 61px
+				width: auto
+				line-height: 30px
+				padding: 5px 15px 5px 61px
+				background: rgba($tan, 1)
+				z-index: 50
+				+border-radius(24px)
+				+pie-clearfix
+				+transition(right .24s ease-in-out, box-shadow .24s ease-in-out)
+				p
+					text-align: center
+					color: $dkbrown
+					font-family: $headline-stack
+					font-size: 24px
+					margin: 0
+					span
+						min-width: 24px
+						text-align: right
+						display: inline-block
+					a
+						background: $blue
+						display: block
+						width: 100%
+						padding: 3px 16px 3px 18px
+						margin-left: -21px
+						color: $white
+						text-decoration: none
+						border: 1px solid $blue
+						border-top: 2px solid #055f94
+						+border-bottom-right-radius(24px)
+						+transition(background .24s ease-in-out, border .24s ease-in-out)
+						&:hover
+							background: $green
+							border: 1px solid $green
+							border-top: 2px solid #5c8514
+
+			&:hover, &:active
+				cursor: pointer
+				h2
+					background: rgba(#8f341c, 1)
+					color: $orange
+				img
+					+box-shadow(0 0 0 4px rgba(#8f341c, 1), 0 0 15px rgba(#333, .8))
+			&.active
+				h2
+					background: rgba(#8f341c, 1)
+					color: $orange
+					+box-shadow(0 0 10px #333)
+				img
+					+box-shadow(0 0 0 4px rgba(#8f341c, 1), 0 0 15px rgba(#333, .8))
+				aside
+					right: -135px
+					+box-shadow(0 0 10px rgba(#333, .5))
+
+		&#volunteerlist
+			li
+				h2
+					position: relative
+					bottom: auto
+					+border-bottom-right-radius(0)
+					+border-bottom-left-radius(0)
+				aside
+					+border-top-right-radius(0)
+					+border-top-left-radius(0)
+					+box-shadow(0 0 10px rgba(#333, .38))
+					position: relative
+					right: auto
+					bottom: auto
+					height: auto
+					background: #ae9f7c
+					padding: 0
+					p
+						width: 100%
+						height: 45px
+						line-height: 45px
+						color: $dkbrown
+						position: relative
+						text-align: center
+						font-weight: normal
+				a
+					position: absolute
+					right: 50px
+					top: 0
+					bottom: 0
+					line-height: 95px
+					width: auto
+					text-align: center
+					display: block
+					padding: 0 20px 0 90px
+					border: none
+					color: #fff
+					background: $blue
+					+border-top-right-radius(24px)
+					+border-bottom-right-radius(24px)
+					text-decoration: none
+					font-size: 24px
+					font-family: $headline-stack
+					&:hover
+						background: $green
+
+				&.active
+					a
+						right: -120px
+						+box-shadow(0 0 10px rgba(#333, .5))
+
+
+
+
+@media screen and (max-width: $break-medium)
+	aside.listcontainer
+		ul#locationlist
+			width: 240px
+			li
+				display: block
+				width: 100%
+				position: relative
+				margin-bottom: 50px
+				text-align: center
+				&:last-child
+					border: none
+					margin-bottom: 0
+				h2
+					width: 240px
+					left: -15px
+					bottom: 0px
+					font-size: 24px
+				img
+					width: 240px
+					height: 240px
+				aside
+					position: absolute
+					bottom: 91px
+					width: 110px
+					p
+						font-size: 18px
+
+
+// Map
+// ************************************************
+section#map
+	position: fixed
+	top: 0
+	bottom: -1px
+	width: 100%
+	p#reload
+		position: fixed
+		bottom: 0
+		right: 580px
+		z-index: 120
+		a
+			+border-radius(0)
+			width: 60px
+			height: 60px
+			line-height: 54px
+			background: url(images/reload.png) no-repeat 0 0 $orange
+			color: $white
+			font-size: 38px
+			border: none
+			border-radius: 100%
+			float: left
+			margin-left: 15px
+			font-weight: bold
+			text-indent: -9999px
+			+box-shadow(0 0 5px rgba(#333, .38))
+			&:hover
+				background: url(images/reload.png) no-repeat 0 -60px #8f341c
+				color: $orange
+	.leaflet-control
+		margin-bottom: 0
+	.leaflet-bottom, .leaflet-right
+		right: 424px
+		bottom: 18px
+		margin-right: 0
+		margin-bottom: 0
+		.leaflet-bar
+			border: none
+			+pie-clearfix
+			a
+				+border-radius(0)
+				width: 60px
+				height: 60px
+				line-height: 54px
+				color: $white
+				font-size: 38px
+				border: none
+				border-radius: 100%
+				float: left
+				margin-left: 15px
+				font-weight: bold
+				text-indent: -9999px
+				+box-shadow(0 0 5px rgba(#333, .38))
+				&.leaflet-control-zoom-in
+					background: url(images/zoomin.png) no-repeat 0 0 $orange
+					&:hover
+						background: url(images/zoomin.png) no-repeat 0 -60px #8f341c
+				&.leaflet-control-zoom-out
+					background: url(images/zoomout.png) no-repeat 0 0 $orange
+					&:hover
+						background: url(images/zoomout.png) no-repeat 0 -60px #8f341c
+
+		.leaflet-control-attribution
+			display: none
+
+@media screen and (max-width: $break-medium)
+	section#map
+		p#reload
+			right: 158px
+		.leaflet-bottom, .leaflet-right
+			right: 0
+
+
+// Map pin pop-up
+// - - - - - - - - - -
+div.leaflet-popup
+	bottom: 64px !important
+	+legacy-pie-clearfix
+	+border-radius(24px)
+	+border-top-right-radius(0)
+	+border-top-left-radius(0)
+	a.leaflet-popup-close-button
+		background: url(images/close_popup.png) $tan no-repeat 0 0
+		text-indent: -9999px
+		height: 20px
+		width: 20px
+		display: block
+		padding: 0
+		border: 4px solid $tan
+		&:hover
+			background-position: 0 -20px
+	div.leaflet-popup-content-wrapper
+		padding-top: 0
+		background: $tan
+		+border-radius(24px)
+		+border-top-right-radius(0)
+		+border-top-left-radius(0)
+		+box-shadow(0 0 10px rgba(#333, .8))
+		div.leaflet-popup-content
+			margin: 0
+			width: 100%
+			+border-radius(24px)
+			+border-top-right-radius(0)
+			+border-top-left-radius(0)
+			div.map-popup
+				width: 100%
+				+pie-clearfix
+				img
+					cursor: pointer
+					margin: 2px 1px
+					&.oneup, &.fourup
+						width: 319px
+				div.name
+					cursor: pointer
+					font-size: 30px
+					line-height: 1em
+					font-family: $headline-stack
+					color: #8f341c
+					text-align: center
+					padding: 10px 0 0
+				p
+					font-size: 15px
+					color: $dkbrown
+					text-align: center
+					margin: 0 0 15px
+					font-family: $headline-stack
+					font-size: 20px
+					padding-top: 6px
+					span.venue
+						margin-right: 5px
+
+
+
+	div.leaflet-popup-tip
+		background: $tan
+		+box-shadow(0 0 10px rgba(#333, .8))
+
+
+
+// Mobile Photo Form
+// ************************************************
+body.mobile_photo
+	background: $tan
+	padding: 20px
+
+	h2
+		margin: 0 0 30px 0
+		font-size: 54px
+
+	form
+		width: 100%
+
+		ol li
+			margin-bottom: 20px
+
+			label
+				font-size: 30px
+				font-family: $headline-stack
+				margin-bottom: 10px
+				line-height: 18px
+				display: block
+				width: 100%
+
+			select
+				width: 100%
+				padding: 5px 8px
+				border: none
+				font-family: $headline-stack
+				font-size: 18px
+				color: $blue
+				margin-bottom: 15px
+				border: 2px solid lighten($dkbrown, 30%)
+				+box-shadow(0px 0px 4px lighten($dkbrown, 35%) inset)
+				&:focus
+					outline: none
+
+			input[type="text"]
+				width: 93%
+				padding: 5px 3%
+				border: none
+				font-family: $headline-stack
+				font-size: 18px
+				color: $blue
+				margin-bottom: 15px
+				border: 2px solid lighten($dkbrown, 30%)
+				+box-shadow(0px 0px 4px lighten($dkbrown, 35%) inset)
+				&:focus
+					outline: none
+
+			input[type="submit"]
+				padding: 8px 16px
+				margin-top: 20px
+				+border-radius(24px)
+				border: none
+				background: $green
+				font-family: $headline-stack
+				color: $white
+				font-size: 24px
+				cursor: pointer
+				width: 98%
+				-webkit-appearance: none
+				&:hover
+					background: $blue
+
+			span.helptext
+				display: none
+

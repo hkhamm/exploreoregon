@@ -1,0 +1,11 @@
+[
+{
+  "pk": 1, 
+  "model": "sky_settings.setting", 
+  "fields": {
+    "name": "mapbox_api_key", 
+    "value": "barto457.map-khfqztb0", 
+    "setting_type": "s"
+  }
+}
+]

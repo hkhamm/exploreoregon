@@ -1,0 +1,580 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Explore Oregon</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="{{STATIC_URL}}css/images/favicon.png" type="image/x-icon">
+
+    <link href="{{STATIC_URL}}css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{{STATIC_URL}}css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    <!--[if IE]>
+        <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <script src="{{STATIC_URL}}js/jquery-1.10.1.min.js"></script>
+    <script src="{{STATIC_URL}}js/modernizr.js"></script>
+    <script src="{{STATIC_URL}}js/jquery-ui-1.10.3.js"></script>
+    <script src='{{STATIC_URL}}js/mapbox-1.3.1.js'></script>
+    <script src="{{STATIC_URL}}js/jquerytools.js"></script>
+
+    <meta name="viewport" id="viewport" />
+    <script src="modernizr.js"></script>
+    <script>
+    if(Modernizr.mq("only screen and (max-device-width: 480px)"))
+       document.getElementById("viewport").setAttribute("content","width=960");
+    </script>
+</head>
+
+<body oncontextmenu="return false;">
+
+    <header>
+        <h1><span>Explore</span> Oregon</h1>
+    </header>
+
+    <section id="modal_container">
+        <article>
+            <section class="modal_header">
+                <h2 class="h1 title"></h2>
+                <section class="slides-container">
+                    <div class="slides">
+                    </div>
+                    <ul class="tabs">
+                    </ul>
+                    <a class="prev">prev</a>
+                    <a class="next">next</a>
+                </section>
+            </section>
+            <ul class="venue">
+                <li class="date-holder">Date: <span class="date"></span></li>
+                <li class="time-holder">Time: <span class="time"></span></li>
+                <li class="price-holder">Price: <span class="price"></span></li>
+                <li class="venue-holder">Location: <span class="venue-name"></span></li>
+                <li class="address-holder">Address: <span class="address1"></span></li>
+            </ul>
+            <section class="content"></section>
+            <aside class="content-sidebar">
+                <h3>Contribute to this location with your own photo</h3>
+                <form class="add_photo"
+                        method="POST" action="{{url('geologicalsite_submit_photo')}}"
+                        enctype="multipart/form-data"
+                        target="submit-photo"
+                        >
+                    {{csrf()}}
+                    <input type="hidden" name="site_id" id="photo_site_id" value=""/>
+                    <fieldset>
+                        <ol>
+                            <li>
+                                <label for="photo_name">Your name:</label>
+                                <input type="text" name="your_name" id="photo_credits" />
+                            </li>
+                            <li>
+                                <label for="photo_name">Photo description:</label>
+                                <input type="text" name="description" id="photo_name" />
+                            </li>
+                            <li>
+                                <label for="imageupload">Select a photo:</label>
+                                <input type="file" name="photo" id="imageupload" />
+                            </li>
+                            <li>
+                                <input type="submit" value="Submit your photo" id="imageupload" />
+                            </li>
+                        </ol>
+                    </fieldset>
+                <p class="success-message" style="display: none"><span>Thanks for your submission!</span> For the enjoyment of all visitors, your photo is being reviewed by museum staff and will appear after it is approved.</p>
+                <iframe id="submit-photo-frame" name="submit-photo" style="display: none"></iframe>
+                </form>
+            </aside>
+        </article>
+        <section class="tipheader">
+            <h2>User submitted tips</h2>
+
+
+            <form class="add_comment"
+                    method="POST" action="{{url('geologicalsite_submit_comment')}}"
+                    enctype="multipart/form-data"
+                    target="submit-comment"
+                    >
+                {{csrf()}}
+                <input type="hidden" name="site_id" id="comment_site_id" value=""/>
+                <fieldset>
+                    <ol>
+                        <li>
+                            <label for="#name">Name: <span id="name_errors" class="error"></span></label>
+                            <input id="comment_name" type="text" name="name"/>
+                        </li>
+                        <li>
+                            <label for="#comment">Enter your tip below: <span id="body_errors" class="error"></span></label>
+                            <textarea id="comment" name="body"></textarea>
+                        </li>
+                        <li><input id="submit" type="submit" value="Submit Tip" /></li>
+                    </ol>
+                </fieldset>
+                <p class="success-message" style="display: none"><span>Thanks for your submission!</span> For the enjoyment of all visitors, your tip is being reviewed by museum staff and will appear after it is approved.</p>
+                <iframe id="submit-comment-frame" name="submit-comment" style="display: none"></iframe>
+                <p><a href="#" class="add_button_close">Close</a></p>
+            </form>
+
+            <ul>
+                <li><a href="#" class="sort-button active" id="sort-comments-best">Best</a></li>
+                <li><a href="#" class="sort-button" id="sort-comments-all">All</a></li>
+            </ul>
+
+            <h3><a href="#" class="add_comment_open">Add a tip</a></h3>
+        </section>
+        <aside class="comments">
+            <ul class="user_comments">
+            </ul>
+        </aside>
+        <p class="modal_close"><a href="#">Back to the Map</a></p>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#" rel="#locationlist" class="active">Go See It</a></li>
+            <li><a href="#" rel="#volunteerlist">Go Do It</a></li>
+        </ul>
+    </nav>
+
+    <aside class="listcontainer">
+        <ul id="locationlist">
+        {% for site in geological_sites %}
+            <li data-pk="{{site.pk}}">
+                <h2>{{site.name}}</h2>
+                {% set approved = site.geologicalsitephoto_set.approved() %}
+                {%if approved%}
+                    <img src="{{approved[0].photo.square.url}}" alt="{{site.name}}" />
+                {%else%}
+                    <img src="{{STATIC_URL}}images/placeholder.jpg" alt="{{site.name}}"/>
+                {%endif%}
+                <aside>
+                    <p><em class="distance" data-lat="{{site.latitude}}" data-lng="{{site.longitude}}"></em> away</p>
+                    <p><a href="#" data-pk="{{site.pk}}">View Details</a></p>
+                </aside>
+            </li>
+        {%endfor%}
+        </ul>
+
+        <ul id="volunteerlist" style="display: none">
+        {% for opportunity in volunteer_opportunities %}
+            <li data-pk="{{opportunity.pk}}">
+                <h2>{{opportunity.name}}</h2>
+                <aside>
+                    <p>{{ opportunity.venue }}</p>
+                </aside>
+                <a href="#" data-pk="{{opportunity.pk}}">View Details</a>
+            </li>
+        {% endfor %}
+        </ul>
+
+    </aside>
+
+    <section id="map">
+        <p id="reload"><a href="#">Reload</a></p>
+    </section>
+
+    <footer><p>Copyright &copy; {{year|default(2013)}} University of Oregon</p></footer>
+
+
+    <script>
+        window.MnchSettings = {
+            'mapbox_api_key': '{{mapbox_api_key}}',
+            'session_timeout_hard': {{session_timeout_hard|default(120)}},
+            'session_timeout_soft': {{session_timeout_soft|default(15)}},
+            'default_location': {{default_location|default([0,0])|jsonify|safe}},
+            'comments_url': '{{url("geologicalsite_comments")}}',
+            'is_kiosk_display': {{is_kiosk_display|lower}},
+            'allow_kiosk_commenting': {{allow_kiosk_commenting|lower}},
+        }
+    </script>
+
+    <script type='text/javascript' src="{{ STATIC_URL }}js/oregonoutline.js"> </script>
+    <script type='text/javascript' src="{{ STATIC_URL }}js/site.js"> </script>
+
+    <script type='text/javascript'>
+        // When the add comment form is submitted, add errors to the form for any missing fields
+        $('form.add_comment').submit(function(e) {
+            if (!$("input#comment_name").val()) {
+                $("#name_errors").html("This field is required.");
+            } else {
+                $("#name_errors").html("");
+            }
+            if (!$("textarea#comment").val()) {
+                $("#body_errors").html("This field is required.");
+            } else {
+                $("#body_errors").html("");
+            }
+        });
+    </script>
+
+
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            {#
+             # close popup when click anywhere else
+             #}
+            $(window).on('click', function(e) {
+                if (! $('#modal_container').hasClass("active")) {
+                    return;
+                }
+                if ($(e.target).parents('#modal_container').length == 0 && $(e.target).parents('.map-popup').length == 0) {
+                    close_popup();
+                    return false;
+                }
+
+            })
+
+            {#
+             # set up nav links to switch between volunteer and geological_features
+             #}
+            $('nav li a').click(function() {
+                if ($('#modal_container').hasClass("active")) {
+                    close_popup();
+                    return false;
+                }
+
+                var $rel = $($(this).attr('rel'))
+                $('.listcontainer ul').hide();
+                $('nav li a').removeClass("active")
+
+                $rel.show();
+                $(this).addClass("active")
+                if ($rel[0].id == "locationlist") {
+                    prep_geological();
+                }
+                else if ($rel[0].id == "volunteerlist") {
+                    prep_volunteer();
+                }
+            })
+
+
+            {#
+             # set up list links for both volunteer and geological_features
+             #}
+            $(".listcontainer li").click(function(){
+                if ($('#modal_container').hasClass("active")) {
+                    close_popup();
+                    return false;
+                }
+
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+
+                // Scroll the location list
+                var this_pk = $(this).data('pk');
+                var type;
+                if ($(this).parent().attr('id') == 'volunteerlist') {
+                    type = "volunteer";
+                } else {
+                    type = "geological";
+                }
+                scroll_to_location(this_pk, type);
+
+                var pk = $(this).attr("data-pk");
+                var marker = map_markers[pk];
+                var markerlatlng = marker.getLatLng();
+
+                // Position the screen such that the pin is centered between the li and the right side of the screen
+                var screenlatlng = {};
+                screenlatlng['lat'] = markerlatlng['lat'];
+                screenlatlng['lng'] = markerlatlng['lng'] - .065;
+                map.setView(screenlatlng, 11, {pan: {animate: true, duration: 1.5}, zoom: {animate: true}});
+
+                marker.openPopup();
+                $( "#modal_container" ).removeClass( "active", 0 );
+                enable_map_interactivity();
+
+            });
+
+            {#
+             # view details for both volunteer and geological_sites
+             #}
+            $( ".listcontainer li a" ).click(function() {
+                if ( $("#modal_container").hasClass("active") ) {
+                    // Get the clicked on volunteer opportunity, compare it to opened modal, if different, open new one
+                    var clicked_volunteer_li = $(this).closest('li');
+                    var clicked_volunteer_pk = $(this).attr("data-pk");
+                    var clicked_volunteer_title = clicked_volunteer_li.find('h2').html();
+                    var modal_title = $("#modal_container").find('h2').html();
+                    if (clicked_volunteer_title != modal_title) {
+                        select_volunteer_opportunity(clicked_volunteer_pk);
+                    } else {
+                        close_popup();
+                    }
+                    return false;
+                }
+
+                $( "#modal_container" ).addClass( "active", 2000 );
+                var pk = $(this).attr("data-pk");
+
+                if ($(this).parents('#locationlist').length > 0 || $(this).hasClass('geological')) {
+                    select_geological_site(pk);
+                }
+                else if ($(this).parents('#volunteerlist').length > 0 || $(this).hasClass('volunteer')) {
+                    select_volunteer_opportunity(pk);
+                }
+
+                // Pan the map to accomodate the modal
+                if ($(this).parents('#locationlist').length > 0) {
+                    // geological formations
+                    map.panBy([675,0]);
+                } else {
+                    // volunteer opportunities
+                    map.panBy([500,0]);
+                }
+
+                map_markers[pk].closePopup();
+                disable_map_interactivity();
+                return false;
+            });
+
+
+            $( "div.map-popup").click(function() {
+
+                if ( $("#modal_container").hasClass("active") ) {
+                    close_popup();
+                    return false;
+                }
+
+                $( "#modal_container" ).addClass( "active", 2000 );
+                var pk = $(this).attr("data-pk");
+
+                if ($(this).parents('#locationlist').length > 0 || $(this).hasClass('geological')) {
+                    select_geological_site(pk);
+                }
+                else if ($(this).parents('#volunteerlist').length > 0 || $(this).hasClass('volunteer')) {
+                    select_volunteer_opportunity(pk);
+                }
+
+                // Pan the map to accomodate the modal
+                if ($(this).parents('#locationlist').length > 0) {
+                    // geological formations
+                    map.panBy([675,0]);
+                } else {
+                    // volunteer opportunities
+                    map.panBy([500,0]);
+                }
+
+                map_markers[pk].closePopup();
+                disable_map_interactivity();
+                return false;
+            });
+
+
+            {#
+             # modal window events
+             #}
+            $( "p.modal_close" ).click(function() {
+                close_popup();
+                // Open the cooresponding tooltip
+                var pk = $("#modal_container").attr("class").match(/\w*-[\d*]/)[0].split("-")[1];
+                var marker = map_markers[pk];
+                marker.openPopup();
+                return false;
+            });
+
+            $("a.add_comment_open").click(function() {
+                $('#comment_name').val('');
+                $('#comment').val('');
+                $('#submit-comment-frame').hide();
+                $("form.add_comment").slideToggle();
+            });
+            $("a.add_button_close").click(function() {
+                $("form.add_comment").slideUp();
+            });
+
+            // Override behavior for previous and next buttons, so they work if closed and re-opened
+            $('a.prev').click(function(event) {
+                event.stopPropagation();
+                var api = $("ul.tabs").data("tabs");
+                api.prev();
+            });
+            $('a.next').click(function(event) {
+                event.stopPropagation();
+                var api = $("ul.tabs").data("tabs");
+                api.next();
+            });
+            // Scroll to next photo when clicking the actual photo
+            $('.modal_header').click(function() {
+                var api = $("ul.tabs").data("tabs");
+                api.next();
+            });
+
+            {#
+             # like tip
+             #}
+            $(document).on('click', "aside.like a", function() {
+                var pk = $(this).attr("data-pk")
+                session_handle['liked'][pk] = true;
+                var $this = $(this)
+                if ($this.hasClass("liked")) {
+                    return false;
+                }
+                $this.addClass("liked");
+                $this.html("You liked this tip");
+                setTimeout(function(){
+                    $this.removeClass("liked");
+                    $this.html('Like');
+                },5000);
+
+                var $h4 = $(this).parents('aside.like').siblings('h4');
+                var html = $h4.html();
+                if (/ \/\/ /.test(html)) {
+                    $h4.html(html.replace(/ \/\/ (\d+) likes?/,function (match,p1) {
+                        return " // "+(Number(p1)+1)+" likes"
+                    }));
+                } else {
+                    $h4.html(html+" // 1 like")
+                }
+
+                $.post('{{url("like_comment")}}', {'comment_id': pk,
+                    'csrfmiddlewaretoken': '{{csrf_token}}'});
+
+                return false;
+            });
+
+            {#
+             # reload button
+             #}
+            $('p#reload a').click(function() {
+                if ( $("#modal_container").hasClass("active") )
+                    return false;
+                location.reload();
+            });
+
+            {#
+             # set up sesion session timeouts
+             #}
+            $(document).mousemove(session_timeout_reset);
+            $(document).keypress(session_timeout_reset);
+        });
+    </script>
+
+    <script type='text/javascript'>
+        var geological_sites = {{ sites_json|safe }};
+        var geological_features = [
+        {% for site in geological_sites %}
+            {
+                'type': "Feature",
+                'geometry': {
+                    'type': "Point",
+                    'coordinates': [{{site.longitude}}, {{site.latitude}}]
+                },
+                'properties': {
+                    'title': "{{site.name}}",
+                    'photos': {{site.photos_json()|safe }},
+                    'type': "geological",
+                    'pk': {{site.pk}},
+                    'icon': {
+                        'iconUrl': '{{STATIC_URL}}css/images/geolocation_pin.png',
+                        'iconSize': [60,71],
+                        'iconAnchor': [30,71],
+                        'popupAnchor': [0,-71],
+                    }
+                }
+
+            },
+        {%endfor%}
+        ];
+
+        var volunteer_opportunities = {{ volunteer_json|safe }};
+        var volunteer_features = [
+        {% for opportunity in volunteer_opportunities %}
+            {
+                'type': "Feature",
+                'geometry': {
+                    'type': "Point",
+                    'coordinates': [{{opportunity.venue.longitude}}, {{opportunity.venue.latitude}}]
+                },
+                'properties': {
+                    'title': "{{ opportunity.name }}",
+                    'type': "volunteer",
+                    'pk': {{ opportunity.pk }},
+                    'venue': "{{ opportunity.venue.name }}",
+                    'photo': "{% if opportunity.venue.photo %}{{ opportunity.venue.photo.banner.url|safe }}{% endif %}",
+                    'icon': {
+                        'iconUrl': '{{STATIC_URL}}css/images/volunteer_pin.png',
+                        'iconSize': [50,62],
+                        'iconAnchor': [25,62],
+                        'popupAnchor': [0,-62],
+                    }
+                }
+            },
+        {% endfor %}
+        ]
+    </script>
+
+    <script type='text/javascript'>
+        session_start();
+
+        {%if default_location[0] and default_location[1]%}
+        update_location({{default_location[0]}}, {{default_location[1]}});
+        {%endif%}
+
+        update_location_from_browser();
+    </script>
+
+    <script type='text/javascript'>
+
+        // Styles for the border around Oregon
+        var stateBorderStyle = {
+            "fillColor": "none",
+            "color": "{{ oregon_border_color }}",
+            "opacity": "100",
+        };
+
+        var map = L.mapbox.map('map', '{{mapbox_api_key}}', { zoomControl: false, maxZoom: {{ max_zoom }}, minZoom: {{ min_zoom }} })
+        map.setMaxBounds([{{ southwest_map_boundary }}, {{ northeast_map_boundary }}]);
+        var zoomControl = new L.Control.Zoom({ position: 'bottomright' });
+        zoomControl.addTo(map);
+        map.scrollWheelZoom.disable();
+
+        // Add the border of Oregon to the map
+        L.geoJson(oregonData, {style: stateBorderStyle}).addTo(map);
+
+        map.setView([43.98688630934305, -121.84661865234374], 8);
+
+        window.map_markers = {}
+        map.markerLayer.on('layeradd', function (e) {
+            var marker = e.layer,
+                feature = marker.feature;
+
+            map_markers[feature.properties.pk] = marker;
+
+            var content = feature_tooltip_content(feature)
+
+            marker.bindPopup(content, {
+                closeButton: true,
+                minWidth: 320,
+            });
+            marker.setIcon(L.icon(feature.properties.icon));
+
+        });
+
+        map.markerLayer.on('click', function(e) {
+            var pinlatlng = e.layer.getLatLng();
+            var pk = e.layer.feature.properties.pk;
+            var type = e.layer.feature.properties.type;
+            open_tooltip(map, pinlatlng, pk, type);
+        });
+
+        prep_geological();
+
+    </script>
+
+</body>
+
+</html>

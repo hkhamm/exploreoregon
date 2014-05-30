@@ -1,0 +1,925 @@
+-- MySQL dump 10.13  Distrib 5.5.29, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: pdg_mnch
+-- ------------------------------------------------------
+-- Server version	5.5.29-0ubuntu0.12.04.2
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `app_log_applog`
+--
+
+DROP TABLE IF EXISTS `app_log_applog`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `app_log_applog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `who` varchar(1024) NOT NULL,
+  `what` varchar(1024) NOT NULL,
+  `when` datetime NOT NULL,
+  `where` varchar(1024) NOT NULL,
+  `info` varchar(1024) NOT NULL,
+  `ip_address` char(15) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `app_log_applog_ca305b63` (`who`(255))
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `app_log_applog`
+--
+
+LOCK TABLES `app_log_applog` WRITE;
+/*!40000 ALTER TABLE `app_log_applog` DISABLE KEYS */;
+INSERT INTO `app_log_applog` VALUES (1,'wiggins','submitted-comment','2013-09-05 20:02:53','/geological-site/submit/comment','<GeologicalSiteComment:6>','71.94.228.180'),(2,'abarton','submitted-comment','2013-09-06 19:47:47','/geological-site/submit/comment','<GeologicalSiteComment:7>','74.95.42.1'),(3,'abarton','liked-comment','2013-09-06 19:49:50','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(4,'abarton','liked-comment','2013-09-06 19:50:07','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(5,'abarton','submitted-comment','2013-09-06 19:50:29','/geological-site/submit/comment','<GeologicalSiteComment:8>','74.95.42.1'),(6,'abarton','liked-comment','2013-09-06 19:51:01','/geological-site/like/comment','<GeologicalSiteComment:8>','74.95.42.1'),(7,'wiggins','liked-comment','2013-09-09 20:44:52','/geological-site/like/comment','<GeologicalSiteComment:1>','71.94.228.180'),(8,'wiggins','liked-comment','2013-09-09 20:45:25','/geological-site/like/comment','<GeologicalSiteComment:1>','71.94.228.180'),(9,'abarton','submitted-comment','2013-09-10 18:27:01','/geological-site/submit/comment','<GeologicalSiteComment:9>','74.95.42.1'),(10,'abarton','submitted-comment','2013-09-10 18:28:49','/geological-site/submit/comment','<GeologicalSiteComment:10>','74.95.42.1'),(11,'abarton','liked-comment','2013-09-10 18:29:48','/geological-site/like/comment','<GeologicalSiteComment:9>','74.95.42.1'),(12,'AnonymousUser','liked-comment','2013-09-10 18:33:20','/geological-site/like/comment','<GeologicalSiteComment:9>','74.95.42.1'),(13,'AnonymousUser','liked-comment','2013-09-10 18:33:21','/geological-site/like/comment','<GeologicalSiteComment:10>','74.95.42.1'),(14,'AnonymousUser','submitted-comment','2013-09-19 17:35:15','/geological-site/submit/comment','<GeologicalSiteComment:11>','74.95.42.1'),(15,'AnonymousUser','liked-comment','2013-09-19 17:36:14','/geological-site/like/comment','<GeologicalSiteComment:10>','74.95.42.1'),(16,'AnonymousUser','liked-comment','2013-09-19 17:36:49','/geological-site/like/comment','<GeologicalSiteComment:10>','74.95.42.1'),(17,'AnonymousUser','liked-comment','2013-09-19 21:12:52','/geological-site/like/comment','<GeologicalSiteComment:8>','74.95.42.1'),(18,'abarton','liked-comment','2013-09-23 17:19:54','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(19,'AnonymousUser','submitted-comment','2013-10-02 21:27:49','/geological-site/submit/comment','<GeologicalSiteComment:12>','71.94.228.180'),(20,'AnonymousUser','submitted-comment','2013-10-03 18:09:03','/geological-site/submit/comment','<GeologicalSiteComment:13>','24.20.112.25'),(21,'AnonymousUser','liked-comment','2013-10-03 18:09:13','/geological-site/like/comment','<GeologicalSiteComment:8>','24.20.112.25'),(22,'colby','liked-comment','2013-10-03 19:19:38','/geological-site/like/comment','<GeologicalSiteComment:13>','24.20.112.25'),(23,'AnonymousUser','submitted-photo','2013-10-03 19:34:51','/geological-site/submit/photo','<GeologicalSitePhoto:15>','24.20.112.25'),(24,'AnonymousUser','submitted-comment','2013-10-23 22:10:08','/geological-site/submit/comment','<GeologicalSiteComment:14>','24.20.112.25'),(25,'abarton','submitted-comment','2013-10-24 17:58:49','/geological-site/submit/comment','<GeologicalSiteComment:15>','74.95.42.1'),(26,'AnonymousUser','liked-comment','2013-10-31 22:06:56','/geological-site/like/comment','<GeologicalSiteComment:9>','74.95.42.1'),(27,'AnonymousUser','submitted-comment','2013-10-31 22:07:10','/geological-site/submit/comment','<GeologicalSiteComment:16>','74.95.42.1'),(28,'AnonymousUser','liked-comment','2013-10-31 22:07:17','/geological-site/like/comment','<GeologicalSiteComment:10>','74.95.42.1'),(29,'AnonymousUser','submitted-comment','2013-10-31 22:07:32','/geological-site/submit/comment','<GeologicalSiteComment:17>','74.95.42.1'),(30,'AnonymousUser','liked-comment','2013-12-17 19:37:28','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(31,'AnonymousUser','liked-comment','2013-12-17 19:40:12','/geological-site/like/comment','<GeologicalSiteComment:13>','74.95.42.1'),(32,'AnonymousUser','submitted-comment','2013-12-17 19:54:59','/geological-site/submit/comment','<GeologicalSiteComment:18>','74.95.42.1'),(33,'abarton','liked-comment','2013-12-17 20:00:34','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(34,'abarton','liked-comment','2013-12-17 20:04:49','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(35,'abarton','liked-comment','2013-12-17 20:05:12','/geological-site/like/comment','<GeologicalSiteComment:13>','74.95.42.1'),(36,'abarton','liked-comment','2013-12-17 20:05:13','/geological-site/like/comment','<GeologicalSiteComment:8>','74.95.42.1'),(37,'abarton','liked-comment','2013-12-17 20:05:38','/geological-site/like/comment','<GeologicalSiteComment:13>','74.95.42.1'),(38,'abarton','liked-comment','2013-12-17 20:09:21','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(39,'abarton','liked-comment','2013-12-17 20:09:25','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(40,'abarton','liked-comment','2013-12-17 20:09:31','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(41,'abarton','submitted-photo','2013-12-17 20:11:21','/geological-site/submit/photo','<GeologicalSitePhoto:18>','74.95.42.1'),(42,'abarton','submitted-comment','2013-12-17 20:38:57','/geological-site/submit/comment','<GeologicalSiteComment:19>','74.95.42.1'),(43,'abarton','submitted-comment','2013-12-17 20:42:41','/geological-site/submit/comment','<GeologicalSiteComment:20>','74.95.42.1'),(44,'AnonymousUser','submitted-comment','2013-12-17 20:44:03','/geological-site/submit/comment','<GeologicalSiteComment:21>','74.95.42.1'),(45,'AnonymousUser','liked-comment','2013-12-17 20:44:12','/geological-site/like/comment','<GeologicalSiteComment:8>','74.95.42.1'),(46,'AnonymousUser','submitted-comment','2013-12-17 20:45:36','/geological-site/submit/comment','<GeologicalSiteComment:22>','74.95.42.1'),(47,'AnonymousUser','liked-comment','2014-01-13 18:03:54','/geological-site/like/comment','<GeologicalSiteComment:9>','74.95.42.1'),(48,'AnonymousUser','liked-comment','2014-01-13 18:03:56','/geological-site/like/comment','<GeologicalSiteComment:10>','74.95.42.1'),(49,'AnonymousUser','submitted-comment','2014-01-13 18:04:28','/geological-site/submit/comment','<GeologicalSiteComment:23>','74.95.42.1'),(50,'AnonymousUser','submitted-comment','2014-01-13 18:06:21','/geological-site/submit/comment','<GeologicalSiteComment:24>','74.95.42.1'),(51,'AnonymousUser','submitted-comment','2014-01-13 18:09:19','/geological-site/submit/comment','<GeologicalSiteComment:25>','74.95.42.1'),(52,'AnonymousUser','submitted-comment','2014-01-13 18:10:03','/geological-site/submit/comment','<GeologicalSiteComment:26>','74.95.42.1'),(53,'AnonymousUser','submitted-comment','2014-01-13 18:11:27','/geological-site/submit/comment','<GeologicalSiteComment:27>','74.95.42.1'),(54,'AnonymousUser','liked-comment','2014-01-13 18:39:55','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(55,'AnonymousUser','liked-comment','2014-01-20 17:45:15','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(56,'AnonymousUser','liked-comment','2014-01-20 17:45:23','/geological-site/like/comment','<GeologicalSiteComment:8>','74.95.42.1'),(57,'AnonymousUser','liked-comment','2014-01-20 17:45:47','/geological-site/like/comment','<GeologicalSiteComment:13>','74.95.42.1'),(58,'AnonymousUser','submitted-comment','2014-01-20 17:46:18','/geological-site/submit/comment','<GeologicalSiteComment:28>','74.95.42.1'),(59,'dwilson','liked-comment','2014-01-22 02:23:01','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(60,'dwilson','liked-comment','2014-01-22 02:23:07','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(61,'dwilson','submitted-comment','2014-01-22 02:23:21','/geological-site/submit/comment','<GeologicalSiteComment:29>','74.95.42.1'),(62,'dwilson','submitted-comment','2014-01-22 02:49:17','/geological-site/submit/comment','<GeologicalSiteComment:30>','74.95.42.1'),(63,'dwilson','submitted-comment','2014-01-22 02:50:05','/geological-site/submit/comment','<GeologicalSiteComment:31>','74.95.42.1'),(64,'AnonymousUser','liked-comment','2014-01-22 02:51:32','/geological-site/like/comment','<GeologicalSiteComment:13>','74.95.42.1'),(65,'AnonymousUser','liked-comment','2014-01-27 17:48:42','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(66,'abarton','liked-comment','2014-02-05 16:46:46','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(67,'AnonymousUser','liked-comment','2014-02-10 19:19:20','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(68,'abarton','liked-comment','2014-02-10 19:21:29','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(69,'AnonymousUser','submitted-photo','2014-02-19 21:10:51','/geological-site/submit/photo','<GeologicalSitePhoto:19>','128.223.129.101'),(70,'AnonymousUser','submitted-comment','2014-02-19 21:12:23','/geological-site/submit/comment','<GeologicalSiteComment:32>','128.223.129.101'),(71,'AnonymousUser','submitted-comment','2014-02-19 21:13:10','/geological-site/submit/comment','<GeologicalSiteComment:33>','128.223.129.101'),(72,'colby','submitted-comment','2014-02-19 21:34:30','/geological-site/submit/comment','<GeologicalSiteComment:34>','128.223.129.101'),(73,'AnonymousUser','submitted-comment','2014-02-19 23:09:16','/geological-site/submit/comment','<GeologicalSiteComment:35>','128.223.129.158'),(74,'colby','liked-comment','2014-02-22 01:10:43','/geological-site/like/comment','<GeologicalSiteComment:34>','24.20.112.25'),(75,'AnonymousUser','liked-comment','2014-02-24 22:58:14','/geological-site/like/comment','<GeologicalSiteComment:18>','74.95.42.1'),(76,'colby','submitted-comment','2014-02-25 18:24:42','/geological-site/submit/comment','<GeologicalSiteComment:36>','128.223.223.210'),(77,'colby','liked-comment','2014-02-25 18:40:20','/geological-site/like/comment','<GeologicalSiteComment:1>','128.223.223.210'),(78,'AnonymousUser','submitted-comment','2014-02-27 19:34:05','/geological-site/submit/comment','<GeologicalSiteComment:37>','24.20.112.25'),(79,'abarton','liked-comment','2014-03-05 23:33:52','/geological-site/like/comment','<GeologicalSiteComment:1>','74.95.42.1'),(80,'dwilson','submitted-photo','2014-03-13 20:27:46','/photo/add/','<GeologicalSitePhoto:21>','74.95.42.1'),(81,'AnonymousUser','submitted-comment','2014-03-24 16:09:48','/geological-site/submit/comment','<GeologicalSiteComment:38>','74.95.42.1'),(82,'colby','submitted-comment','2014-03-25 21:54:11','/geological-site/submit/comment','<GeologicalSiteComment:39>','24.20.112.25'),(83,'colby','liked-comment','2014-03-25 21:55:14','/geological-site/like/comment','<GeologicalSiteComment:39>','24.20.112.25'),(84,'colby','liked-comment','2014-03-25 21:55:34','/geological-site/like/comment','<GeologicalSiteComment:13>','24.20.112.25'),(85,'colby','liked-comment','2014-03-25 21:55:41','/geological-site/like/comment','<GeologicalSiteComment:8>','24.20.112.25'),(86,'colby','submitted-comment','2014-03-25 22:45:54','/geological-site/submit/comment','<GeologicalSiteComment:40>','24.20.112.25'),(87,'colby','submitted-photo','2014-03-25 23:12:35','/geological-site/submit/photo','<GeologicalSitePhoto:22>','24.20.112.25'),(88,'dwilson','submitted-comment','2014-04-01 00:25:58','/geological-site/submit/comment','<GeologicalSiteComment:41>','74.95.42.1'),(89,'dwilson','submitted-photo','2014-04-01 00:26:11','/geological-site/submit/photo','<GeologicalSitePhoto:23>','74.95.42.1'),(90,'AnonymousUser','submitted-comment','2014-04-01 15:47:06','/geological-site/submit/comment','<GeologicalSiteComment:42>','74.95.42.1'),(91,'colby','submitted-comment','2014-04-01 21:37:34','/geological-site/submit/comment','<GeologicalSiteComment:43>','24.20.112.25'),(92,'colby','submitted-photo','2014-04-01 21:38:21','/geological-site/submit/photo','<GeologicalSitePhoto:24>','24.20.112.25');
+/*!40000 ALTER TABLE `app_log_applog` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_group`
+--
+
+DROP TABLE IF EXISTS `auth_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group`
+--
+
+LOCK TABLES `auth_group` WRITE;
+/*!40000 ALTER TABLE `auth_group` DISABLE KEYS */;
+INSERT INTO `auth_group` VALUES (1,'Staff');
+/*!40000 ALTER TABLE `auth_group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_group_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_group_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `group_id` (`group_id`,`permission_id`),
+  KEY `auth_group_permissions_5f412f9a` (`group_id`),
+  KEY `auth_group_permissions_83d7f98b` (`permission_id`),
+  CONSTRAINT `group_id_refs_id_f4b32aac` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
+  CONSTRAINT `permission_id_refs_id_6ba0f519` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group_permissions`
+--
+
+LOCK TABLES `auth_group_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_group_permissions` DISABLE KEYS */;
+INSERT INTO `auth_group_permissions` VALUES (37,1,7),(38,1,8),(39,1,13),(40,1,14),(41,1,19),(42,1,20),(43,1,31),(44,1,32),(45,1,37),(46,1,38),(47,1,40),(48,1,41),(49,1,42),(50,1,43),(51,1,44),(52,1,45),(53,1,46),(54,1,47),(55,1,48),(56,1,49),(57,1,50),(58,1,51),(59,1,52),(60,1,53),(61,1,54),(62,1,55),(63,1,56),(64,1,57),(65,1,58),(66,1,59),(67,1,60),(68,1,61),(69,1,62),(70,1,63),(71,1,64),(72,1,65),(73,1,67),(74,1,68),(75,1,70),(76,1,71);
+/*!40000 ALTER TABLE `auth_group_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_permission`
+--
+
+DROP TABLE IF EXISTS `auth_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `content_type_id` int(11) NOT NULL,
+  `codename` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
+  KEY `auth_permission_37ef4eb4` (`content_type_id`),
+  CONSTRAINT `content_type_id_refs_id_d043b34a` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permission`
+--
+
+LOCK TABLES `auth_permission` WRITE;
+/*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
+INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add content type',4,'add_contenttype'),(11,'Can change content type',4,'change_contenttype'),(12,'Can delete content type',4,'delete_contenttype'),(13,'Can add session',5,'add_session'),(14,'Can change session',5,'change_session'),(15,'Can delete session',5,'delete_session'),(16,'Can add site',6,'add_site'),(17,'Can change site',6,'change_site'),(18,'Can delete site',6,'delete_site'),(19,'Can add log entry',7,'add_logentry'),(20,'Can change log entry',7,'change_logentry'),(21,'Can delete log entry',7,'delete_logentry'),(22,'Can add migration history',8,'add_migrationhistory'),(23,'Can change migration history',8,'change_migrationhistory'),(24,'Can delete migration history',8,'delete_migrationhistory'),(25,'Can add domain redirect',9,'add_domainredirect'),(26,'Can change domain redirect',9,'change_domainredirect'),(27,'Can delete domain redirect',9,'delete_domainredirect'),(28,'Can add regex path redirect',10,'add_regexpathredirect'),(29,'Can change regex path redirect',10,'change_regexpathredirect'),(30,'Can delete regex path redirect',10,'delete_regexpathredirect'),(31,'Can add invited user',11,'add_inviteduser'),(32,'Can change invited user',11,'change_inviteduser'),(33,'Can delete invited user',11,'delete_inviteduser'),(34,'Can add _basic_setting_model',12,'add__basic_setting_model'),(35,'Can change _basic_setting_model',12,'change__basic_setting_model'),(36,'Can delete _basic_setting_model',12,'delete__basic_setting_model'),(37,'Can add setting',13,'add_setting'),(38,'Can change setting',13,'change_setting'),(39,'Can delete setting',13,'delete_setting'),(40,'Can add geological category',14,'add_geologicalcategory'),(41,'Can change geological category',14,'change_geologicalcategory'),(42,'Can delete geological category',14,'delete_geologicalcategory'),(43,'Can add geological site',15,'add_geologicalsite'),(44,'Can change geological site',15,'change_geologicalsite'),(45,'Can delete geological site',15,'delete_geologicalsite'),(46,'Can add geological site photo',16,'add_geologicalsitephoto'),(47,'Can change geological site photo',16,'change_geologicalsitephoto'),(48,'Can delete geological site photo',16,'delete_geologicalsitephoto'),(49,'Can add geological site resource',17,'add_geologicalsiteresource'),(50,'Can change geological site resource',17,'change_geologicalsiteresource'),(51,'Can delete geological site resource',17,'delete_geologicalsiteresource'),(52,'Can add geological site comment',18,'add_geologicalsitecomment'),(53,'Can change geological site comment',18,'change_geologicalsitecomment'),(54,'Can delete geological site comment',18,'delete_geologicalsitecomment'),(55,'Can add venue',19,'add_venue'),(56,'Can change venue',19,'change_venue'),(57,'Can delete venue',19,'delete_venue'),(58,'Can add volunteer category',20,'add_volunteercategory'),(59,'Can change volunteer category',20,'change_volunteercategory'),(60,'Can delete volunteer category',20,'delete_volunteercategory'),(61,'Can add volunteer opportunity',21,'add_volunteeropportunity'),(62,'Can change volunteer opportunity',21,'change_volunteeropportunity'),(63,'Can delete volunteer opportunity',21,'delete_volunteeropportunity'),(64,'Can add bookmark',22,'add_bookmark'),(65,'Can change bookmark',22,'change_bookmark'),(66,'Can delete bookmark',22,'delete_bookmark'),(67,'Can add dashboard preferences',23,'add_dashboardpreferences'),(68,'Can change dashboard preferences',23,'change_dashboardpreferences'),(69,'Can delete dashboard preferences',23,'delete_dashboardpreferences'),(70,'Can add app log',24,'add_applog'),(71,'Can change app log',24,'change_applog'),(72,'Can delete app log',24,'delete_applog'),(73,'Can add volunteer opportunity resource',25,'add_volunteeropportunityresource'),(74,'Can change volunteer opportunity resource',25,'change_volunteeropportunityresource'),(75,'Can delete volunteer opportunity resource',25,'delete_volunteeropportunityresource');
+/*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user`
+--
+
+DROP TABLE IF EXISTS `auth_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `password` varchar(128) NOT NULL,
+  `last_login` datetime NOT NULL,
+  `is_superuser` tinyint(1) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  `is_staff` tinyint(1) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `date_joined` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user`
+--
+
+LOCK TABLES `auth_user` WRITE;
+/*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$10000$dN1k8HJ01InF$uN2GnE4Bhrb4IjZlJNW+a2imAdapuLD7ekya9r6naBw=','2013-09-05 19:54:47',1,'wiggins','M','Wiggins','wiggins@concentricsky.com',1,1,'2013-08-21 22:22:16'),(2,'pbkdf2_sha256$10000$ynxV8Bek7btI$jmwTzp7S0D34HyLrzw4viIwXW+9ygdqF5PCFQvTqzMo=','2014-04-01 23:25:47',1,'abarton','Adam','Barton','adam@concentricsky.com',1,1,'2013-08-22 20:01:23'),(3,'pbkdf2_sha256$10000$yOgjxJfDqJmG$n6by4cv3kTAZQg/ciivqm4loOQzNz87/tgzVxqM8Hkw=','2014-04-02 16:02:11',0,'colby','Colby','Whitenack','cew2@pdgdesign.net',1,1,'2013-10-02 21:47:16'),(4,'pbkdf2_sha256$10000$A7tNbtWGO5qR$z7kilFZUJmK/fdTVwqPedQeQvjjLZPgNVuand2p7SSs=','2014-03-31 22:55:03',1,'dwilson','','','dwilson@concentricsky.com',1,1,'2013-11-19 23:03:28');
+/*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_groups`
+--
+
+DROP TABLE IF EXISTS `auth_user_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`group_id`),
+  KEY `auth_user_groups_6340c63c` (`user_id`),
+  KEY `auth_user_groups_5f412f9a` (`group_id`),
+  CONSTRAINT `group_id_refs_id_274b862c` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
+  CONSTRAINT `user_id_refs_id_40c41112` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_groups`
+--
+
+LOCK TABLES `auth_user_groups` WRITE;
+/*!40000 ALTER TABLE `auth_user_groups` DISABLE KEYS */;
+INSERT INTO `auth_user_groups` VALUES (1,3,1);
+/*!40000 ALTER TABLE `auth_user_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_user_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_user_user_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_user_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`permission_id`),
+  KEY `auth_user_user_permissions_6340c63c` (`user_id`),
+  KEY `auth_user_user_permissions_83d7f98b` (`permission_id`),
+  CONSTRAINT `permission_id_refs_id_35d9ac25` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
+  CONSTRAINT `user_id_refs_id_4dc23c39` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_user_permissions`
+--
+
+LOCK TABLES `auth_user_user_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_user_user_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_user_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `client_admin_dashboard_preferences`
+--
+
+DROP TABLE IF EXISTS `client_admin_dashboard_preferences`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `client_admin_dashboard_preferences` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `data` longtext NOT NULL,
+  `dashboard_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `client_admin_dashboard_preferences_6340c63c` (`user_id`),
+  CONSTRAINT `user_id_refs_id_b5f40b05` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `client_admin_dashboard_preferences`
+--
+
+LOCK TABLES `client_admin_dashboard_preferences` WRITE;
+/*!40000 ALTER TABLE `client_admin_dashboard_preferences` DISABLE KEYS */;
+INSERT INTO `client_admin_dashboard_preferences` VALUES (1,1,'{}','dashboard'),(2,2,'{\"positions\":[\"module_1\",\"module_2\",\"module_3\",\"module_5\",\"module_4\",\"module_6\"],\"columns\":[3,3],\"disabled\":{},\"collapsed\":{}}','dashboard'),(3,3,'{\"positions\":{},\"columns\":{},\"disabled\":{\"module_1\":true,\"module_2\":false},\"collapsed\":{\"module_6\":false,\"module_1\":true}}','dashboard'),(4,4,'{}','dashboard');
+/*!40000 ALTER TABLE `client_admin_dashboard_preferences` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `client_admin_menu_bookmark`
+--
+
+DROP TABLE IF EXISTS `client_admin_menu_bookmark`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `client_admin_menu_bookmark` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `client_admin_menu_bookmark_6340c63c` (`user_id`),
+  CONSTRAINT `user_id_refs_id_72198975` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `client_admin_menu_bookmark`
+--
+
+LOCK TABLES `client_admin_menu_bookmark` WRITE;
+/*!40000 ALTER TABLE `client_admin_menu_bookmark` DISABLE KEYS */;
+INSERT INTO `client_admin_menu_bookmark` VALUES (3,3,'/staff/mnch/geologicalsite/','Go See It - Sites'),(4,3,'/staff/mnch/geologicalsitecomment/','Go See It - Comments'),(5,3,'/staff/mnch/volunteeropportunity/','Go Do It - Opportunities'),(6,3,'/staff/mnch/venue/','Go Do It - Venues'),(7,3,'/staff/mnch/geologicalsitecomment/?status__exact=pending&o=-2','Go See It - Comments'),(8,3,'/staff/mnch/geologicalsitephoto/?status__exact=pending&o=-4','Go See It - Photos');
+/*!40000 ALTER TABLE `client_admin_menu_bookmark` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_admin_log`
+--
+
+DROP TABLE IF EXISTS `django_admin_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_admin_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action_time` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content_type_id` int(11) DEFAULT NULL,
+  `object_id` longtext,
+  `object_repr` varchar(200) NOT NULL,
+  `action_flag` smallint(5) unsigned NOT NULL,
+  `change_message` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `django_admin_log_6340c63c` (`user_id`),
+  KEY `django_admin_log_37ef4eb4` (`content_type_id`),
+  CONSTRAINT `content_type_id_refs_id_93d2d1f8` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
+  CONSTRAINT `user_id_refs_id_c0d12874` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_admin_log`
+--
+
+LOCK TABLES `django_admin_log` WRITE;
+/*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+INSERT INTO `django_admin_log` VALUES (1,'2013-08-22 20:01:23',1,3,'2','abarton',1,''),(2,'2013-08-22 20:02:11',1,3,'2','abarton',2,'Changed password, is_staff and is_superuser.'),(3,'2013-08-22 20:21:53',1,13,'1','mapbox_api_key',1,''),(4,'2013-08-22 20:26:41',1,13,'1','mapbox_api_key',2,'Changed value.'),(5,'2013-08-22 20:39:21',1,15,'2','John Day Fossil Beds',3,''),(6,'2013-08-22 20:39:21',1,15,'1','Crater Lake National Park',3,''),(7,'2013-08-22 20:39:45',1,13,'1','mapbox_api_key',2,'Changed value.'),(8,'2013-08-22 20:40:35',1,15,'3','Crater Lake National Park',1,''),(9,'2013-08-22 20:41:20',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Added geological site photo \"geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4.png\". Added geological site photo \"geologicalsitephoto/4b21554690bb9e3316ac944ec6d10f9e.png\".'),(10,'2013-08-22 20:44:00',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Deleted geological site photo \"crater_lake_lg2.jpg\". Deleted geological site photo \"geologicalsitephoto/4b21554690bb9e3316ac944ec6d10f9e.png\".'),(11,'2013-08-22 20:44:59',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Added geological site photo \"geologicalsitephoto/defbd11d236f18fc30a147efc8d61325.png\".'),(12,'2013-08-22 20:45:48',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Changed photo for geological site photo \"geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4.png\".'),(13,'2013-08-22 20:47:59',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Changed photo for geological site photo \"geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4_1.png\".'),(14,'2013-08-22 20:56:21',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Deleted geological site photo \"geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4_1.png\".'),(15,'2013-08-22 20:59:48',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Added geological site photo \"geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4_4.png\".'),(16,'2013-08-22 21:02:59',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude. Added geological site photo \"geologicalsitephoto/4b21554690bb9e3316ac944ec6d10f9e.png\".'),(17,'2013-08-22 21:03:42',1,15,'3','Crater Lake National Park',2,'Changed latitude and longitude.'),(18,'2013-08-22 21:04:59',1,15,'4','John Day Fossil Beds',1,''),(19,'2013-08-26 05:05:12',1,13,'2','default_location',1,''),(20,'2013-09-04 22:16:27',2,13,'1','mapbox_api_key',2,'Changed value.'),(21,'2013-09-05 18:11:44',2,15,'5','Fake Location',1,''),(22,'2013-09-05 18:12:44',2,15,'5','Fake Location',2,'Added geological site photo \"geologicalsitephoto/632d1d195528bb253727d161d39ae345.png\".'),(23,'2013-09-05 18:18:27',2,15,'6','My house',1,''),(24,'2013-09-05 18:45:56',2,15,'3','Crater Lake National Park',2,'Changed description.'),(25,'2013-09-05 19:54:26',1,15,'5','Fake Location',2,'Changed photo for geological site photo \"geologicalsitephoto/a9caa356c57107b64b60c463aaa83aac.png\".'),(26,'2013-09-05 19:55:09',1,15,'5','Fake Location',2,'Changed photo for geological site photo \"geologicalsitephoto/a9caa356c57107b64b60c463aaa83aac_1.png\".'),(27,'2013-09-05 22:48:21',1,15,'6','My house',2,'Changed photo for geological site photo \"geologicalsitephoto/41c101f4e216e6dbb14344c226fec341.png\".'),(28,'2013-09-05 22:50:06',1,19,'1','Willamette State Forest',1,''),(29,'2013-09-05 22:50:44',1,21,'1','Raking up some leaves',1,''),(30,'2013-09-05 22:51:10',1,19,'2','Steens Mountain',1,''),(31,'2013-09-05 22:51:30',1,21,'2','Picking up trash',1,''),(32,'2013-09-06 19:50:50',2,18,'8','Bobs\'s comment at 19:50 on Sep 06, 2013',2,'Changed status.'),(33,'2013-09-06 19:54:02',2,15,'4','John Day Fossil Beds',2,'Changed photo for geological site photo \"geologicalsitephoto/0ea78a32f890f7f0a9f4472184c8d2b0.png\".'),(34,'2013-09-06 20:01:05',2,19,'2','Steens Mountain',2,'No fields changed.'),(35,'2013-09-06 20:01:34',2,19,'3','Lake Rake',1,''),(36,'2013-09-06 20:02:02',2,21,'3','This is the lake rake',1,''),(37,'2013-09-09 18:06:06',2,15,'3','Crater Lake National Park',2,'Changed description. Added geological site resource \"Wikipedia\". Added geological site resource \"National Geographic\".'),(38,'2013-09-19 22:51:40',2,15,'3','Crater Lake National Park',2,'Added geological site photo \"geologicalsitephoto/bbf54401271fc2c38c4dcd5cdf02018d.png\". Added geological site photo \"geologicalsitephoto/49000c1859026951ca68a12fee4226f2.png\".'),(39,'2013-09-19 23:04:13',2,15,'3','Crater Lake National Park',2,'Deleted geological site comment \"wiggins\'s comment at 20:02 on Sep 05, 2013\".'),(40,'2013-10-02 21:47:16',2,3,'3','colby',1,''),(41,'2013-10-02 21:52:28',2,3,'3','colby',2,'Changed password, first_name, last_name, email, is_staff and is_superuser.'),(42,'2013-10-02 21:52:41',2,3,'2','abarton',2,'Changed password, first_name, last_name and email.'),(43,'2013-10-02 21:52:50',2,3,'1','wiggins',2,'Changed password, first_name and last_name.'),(44,'2013-10-02 21:52:59',2,3,'3','colby',2,'Changed password and is_superuser.'),(45,'2013-10-02 21:56:10',2,2,'1','Staff',1,''),(46,'2013-10-02 21:56:27',2,3,'3','colby',2,'Changed password and groups.'),(47,'2013-10-02 21:57:11',3,15,'6','My house',2,'Changed latitude and longitude.'),(48,'2013-10-03 19:19:17',3,15,'4','John Day Fossil Beds',2,'Changed status for geological site comment \"digger\'s comment at 18:09 on Oct 03, 2013\".'),(49,'2013-10-03 19:25:19',3,15,'3','Crater Lake National Park',2,'Changed updated_by.'),(50,'2013-10-03 20:31:08',3,15,'7','Oregon Caves National Monument',1,''),(51,'2013-10-03 20:32:46',3,15,'7','Oregon Caves National Monument',2,'Changed position for geological site photo \"Oregon Cave Entrance\". Changed position for geological site photo \"Oregon Cave Interior\".'),(52,'2013-10-03 20:56:53',3,14,'1','National Monument',1,''),(53,'2013-10-03 21:00:02',3,15,'7','Oregon Caves National Monument',2,'Changed category.'),(54,'2013-10-03 21:35:41',3,19,'4','South Beach',1,''),(55,'2013-10-03 21:35:49',3,21,'4','SOLVE Beach and Riverside Cleanup',1,''),(56,'2013-10-03 21:37:18',3,21,'4','SOLVE Beach and Riverside Cleanup',2,'Changed description.'),(57,'2013-10-03 21:41:12',3,21,'4','SOLVE Beach and Riverside Cleanup',2,'Changed description.'),(58,'2013-10-31 22:33:15',2,13,'1','mapbox_api_key',2,'Changed value.'),(59,'2013-10-31 22:44:51',2,13,'1','mapbox_api_key',2,'Changed value.'),(60,'2013-11-01 16:57:50',2,13,'1','mapbox_api_key',2,'Changed value.'),(61,'2013-12-17 19:55:23',2,18,'18','Adam Barton\'s comment at 19:54 on Dec 17, 2013',2,'Changed status.'),(62,'2014-01-22 02:18:13',4,13,'3','max_zoom',1,''),(63,'2014-01-22 02:18:19',4,13,'4','min_zoom',1,''),(64,'2014-01-28 18:13:04',2,13,'1','mapbox_api_key',2,'Changed value.'),(65,'2014-02-03 17:54:01',2,15,'7','Oregon Caves National Monument',2,'Added geological site resource \"Taco Bell\".'),(66,'2014-02-04 00:02:14',4,13,'5','is_kiosk_display',1,''),(67,'2014-02-04 00:02:38',4,13,'5','is_kiosk_display',2,'Changed value.'),(68,'2014-02-04 00:03:06',4,13,'5','is_kiosk_display',2,'Changed value.'),(69,'2014-02-05 18:24:31',4,13,'5','is_kiosk_display',2,'Changed value.'),(70,'2014-02-11 19:38:42',4,13,'6','kiosk_ip_addresses',1,''),(71,'2014-02-14 01:52:20',4,13,'6','kiosk_ip_addresses',2,'Changed value.'),(72,'2014-02-19 21:32:37',3,18,'33','Buttface\'s comment at 21:13 on Feb 19, 2014',3,''),(73,'2014-02-19 21:38:32',3,18,'18','Adam Barton\'s comment at 19:54 on Dec 17, 2013',2,'No fields changed.'),(74,'2014-02-19 22:08:57',3,15,'7','Oregon Caves National Monument',2,'No fields changed.'),(75,'2014-02-19 22:21:46',3,18,'30','Dan\'s comment at 02:49 on Jan 22, 2014',2,'Changed body.'),(76,'2014-02-19 22:22:39',3,18,'34','Ann\'s comment at 21:34 on Feb 19, 2014',2,'Changed status, name and body.'),(77,'2014-02-19 22:23:46',3,18,'34','Ann\'s comment at 21:34 on Feb 19, 2014',2,'No fields changed.'),(78,'2014-02-22 00:29:17',3,19,'2','Steens Mountain',2,'No fields changed.'),(79,'2014-02-22 00:37:11',3,19,'5','Sheldon High School',1,''),(80,'2014-02-22 00:38:04',3,19,'6','SE High School',1,''),(81,'2014-02-22 01:14:43',3,15,'3','Crater Lake National Park',2,'Changed name and credits for geological site photo \"Crate Lake at Night\". Deleted geological site photo \"geologicalsitephoto/bbf54401271fc2c38c4dcd5cdf02018d.png\".'),(82,'2014-02-22 01:16:58',3,14,'2','National Park',1,''),(83,'2014-02-22 01:31:56',3,15,'3','Crater Lake National Park',2,'Changed category.'),(84,'2014-02-22 01:32:06',3,15,'4','John Day Fossil Beds',2,'Changed category.'),(85,'2014-02-24 18:31:05',4,21,'2','Picking up trash',2,'No fields changed.'),(86,'2014-02-24 18:32:37',4,21,'1','Raking up some leaves',3,''),(87,'2014-02-24 18:32:54',4,21,'5','Raking Up Some Leaves',1,''),(88,'2014-02-24 18:33:33',4,21,'2','Picking up trash',3,''),(89,'2014-02-24 18:33:53',4,21,'6','Picking up trash',1,''),(90,'2014-02-25 18:55:08',3,19,'7','River Clean up',1,''),(91,'2014-02-25 18:55:26',3,19,'7','River Clean up',2,'No fields changed.'),(92,'2014-02-25 18:57:02',3,19,'7','River Clean up',2,'Changed address, city and state.'),(93,'2014-02-25 18:57:10',3,19,'8','test',1,''),(94,'2014-02-25 19:12:05',3,15,'8','Hayward Field, University of Oregon',1,''),(95,'2014-02-25 19:18:42',3,19,'9','PDG',1,''),(96,'2014-02-25 19:19:46',3,21,'7','Finish Line',1,''),(97,'2014-02-25 19:21:17',3,21,'7','Test',2,'Changed name.'),(98,'2014-02-25 19:21:24',3,21,'7','Test',2,'Changed price.'),(99,'2014-02-25 20:27:09',4,13,'7','oregon_border_color',1,''),(100,'2014-02-25 23:49:27',3,21,'7','Test',2,'Changed is_active.'),(101,'2014-02-26 04:48:01',3,15,'8','Hayward Field',2,'Changed name.'),(102,'2014-02-26 04:50:13',3,19,'10','Eagle Cap Wilderness',1,''),(103,'2014-02-26 04:50:43',3,21,'8','Back Country Hiking',1,''),(104,'2014-02-26 04:51:32',3,21,'9','Slough Restoration',1,''),(105,'2014-02-26 04:52:20',3,21,'10','Archaeological Dig',1,''),(106,'2014-02-27 16:24:11',2,15,'8','Hayward Field',2,'Added geological site photo \"Hayward Field\".'),(107,'2014-02-28 21:33:38',2,13,'7','oregon_border_color',2,'Changed value.'),(108,'2014-02-28 21:33:52',2,13,'7','oregon_border_color',2,'Changed value.'),(109,'2014-02-28 21:34:10',2,13,'7','oregon_border_color',2,'Changed value.'),(110,'2014-03-06 20:06:14',4,2,'1','Staff',2,'Changed permissions.'),(111,'2014-03-06 20:36:38',4,19,'5','Sheldon High School',2,'Changed latitude and longitude.'),(112,'2014-03-06 20:38:35',4,21,'9','Slough Restoration',3,''),(113,'2014-03-06 20:39:06',4,21,'11','Slough Restoration',1,''),(114,'2014-03-06 23:46:10',4,19,'4','South Beach',2,'Changed photo.'),(115,'2014-03-06 23:46:20',4,19,'3','Lake Rake',2,'Changed photo.'),(116,'2014-03-07 19:12:21',2,19,'9','PDG',2,'Changed photo.'),(117,'2014-03-07 20:30:58',4,21,'4','SOLVE Beach and Riverside Cleanup',2,'Added volunteer opportunity resource \"Gewgle\". Added volunteer opportunity resource \"Terrordactyl\".'),(118,'2014-03-10 21:20:28',4,13,'8','auto_approve',1,''),(119,'2014-03-18 18:30:00',4,13,'8','auto_approve',2,'Changed description.'),(120,'2014-03-25 21:44:00',3,15,'7','Oregon Caves National Monument',2,'Changed credits for Go See It Photo \"Oregon Cave Interior\". Changed credits for Go See It Photo \"Oregon Cave Entrance\".'),(121,'2014-03-25 21:48:21',3,19,'10','Eagle Cap Wilderness',2,'Changed photo.'),(122,'2014-03-25 21:54:55',3,18,'39','Trippy\'s comment at 21:54 on Mar 25, 2014',2,'Changed status and body.'),(123,'2014-03-25 21:57:22',3,16,'21','Crater Photo',2,'Changed status.'),(124,'2014-03-25 21:58:10',3,16,'14','geologicalsitephoto/49000c1859026951ca68a12fee4226f2.png',2,'Changed status.'),(125,'2014-03-25 22:01:29',3,19,'5','Sheldon High School',2,'Changed photo.'),(126,'2014-03-25 23:08:40',3,15,'8','Hayward Field',2,'No fields changed.'),(127,'2014-03-25 23:09:11',3,18,'40','George Miller\'s comment at 22:45 on Mar 25, 2014',3,''),(128,'2014-03-25 23:15:05',3,16,'22','cave bats',2,'Changed status.'),(129,'2014-03-31 23:30:15',4,13,'9','southwest_map_boundary',1,''),(130,'2014-03-31 23:30:26',4,13,'10','northeast_map_boundary',1,''),(131,'2014-04-01 00:31:48',4,13,'10','northeast_map_boundary',2,'Changed description.'),(132,'2014-04-01 00:32:03',4,13,'9','southwest_map_boundary',2,'Changed description.'),(133,'2014-04-01 21:39:43',3,18,'43','test\'s comment at 21:37 on Apr 01, 2014',3,''),(134,'2014-04-01 21:39:43',3,18,'42','asdas\'s comment at 15:47 on Apr 01, 2014',3,''),(135,'2014-04-01 21:40:41',3,15,'8','Hayward Field',2,'Changed is_active.'),(136,'2014-04-01 21:42:09',3,15,'7','Oregon Caves National Monument',2,'Changed category.'),(137,'2014-04-01 21:42:18',3,15,'5','Fake Location',2,'No fields changed.'),(138,'2014-04-01 21:42:32',3,15,'4','John Day Fossil Beds',2,'Changed category.'),(139,'2014-04-01 21:42:39',3,15,'3','Crater Lake National Park',2,'Changed category.'),(140,'2014-04-01 21:42:51',3,14,'2','National Park',3,''),(141,'2014-04-01 21:42:51',3,14,'1','National Monument',3,'');
+/*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_content_type`
+--
+
+DROP TABLE IF EXISTS `django_content_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_content_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `app_label` varchar(100) NOT NULL,
+  `model` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `app_label` (`app_label`,`model`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_content_type`
+--
+
+LOCK TABLES `django_content_type` WRITE;
+/*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
+INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'content type','contenttypes','contenttype'),(5,'session','sessions','session'),(6,'site','sites','site'),(7,'log entry','admin','logentry'),(8,'migration history','south','migrationhistory'),(9,'domain redirect','sky_redirects','domainredirect'),(10,'regex path redirect','sky_redirects','regexpathredirect'),(11,'invited user','sky_visitor','inviteduser'),(12,'_basic_setting_model','sky_settings','_basic_setting_model'),(13,'setting','sky_settings','setting'),(14,'geological category','mnch','geologicalcategory'),(15,'geological site','mnch','geologicalsite'),(16,'geological site photo','mnch','geologicalsitephoto'),(17,'geological site resource','mnch','geologicalsiteresource'),(18,'geological site comment','mnch','geologicalsitecomment'),(19,'venue','mnch','venue'),(20,'volunteer category','mnch','volunteercategory'),(21,'volunteer opportunity','mnch','volunteeropportunity'),(22,'bookmark','client_admin','bookmark'),(23,'dashboard preferences','client_admin','dashboardpreferences'),(24,'app log','app_log','applog'),(25,'volunteer opportunity resource','mnch','volunteeropportunityresource');
+/*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_session`
+--
+
+DROP TABLE IF EXISTS `django_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_session` (
+  `session_key` varchar(40) NOT NULL,
+  `session_data` longtext NOT NULL,
+  `expire_date` datetime NOT NULL,
+  PRIMARY KEY (`session_key`),
+  KEY `django_session_b7b81f0c` (`expire_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_session`
+--
+
+LOCK TABLES `django_session` WRITE;
+/*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
+INSERT INTO `django_session` VALUES ('0w1ny7vkdoz82od1wcibyd1qnsbp3dhx','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-04-15 19:31:48'),('23lfzcja90iryexkgg36pnvaocpq6zr9','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-02-17 22:25:45'),('2u67wdodgbk0rys22hdmtjr08nzppmsb','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-02-28 23:14:18'),('40h9gdwhzjtjzxf863hkhqurw33fpt7q','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-04-09 15:29:35'),('4s99jt49ya2lmycnjv73wao5r4agaau6','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-03-05 23:14:39'),('4x0q4kpvksntr4j7q54fz98a4glbacn0','OTc4OTc1NWZhODcxMGZhYTg3ODY5YWJjMjFhODU1ZDg1ODdhMDM2ODqAAn1xAVgKAAAAdGVzdGNvb2tpZVgGAAAAd29ya2VkcQJzLg==','2013-10-17 18:43:03'),('54be5zkaamv55qcldp79skuak9j9amep','MWE0NTczMmE1MWQxZjZjZGMwZGM5NWE3MTJiN2JjNThhZWUzYjU2YTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==','2013-09-19 19:54:47'),('5tp37vjcugfk87eajdgwdzf70ku2nah5','MDY1YTYwY2M1YzliMmQ0YmQ1Yjg0MDNmNDkwYTA3MGJkZGVmOGU4YTqAAn1xAS4=','2013-10-17 21:52:31'),('5tpfd4l5o83xa094rogzom0fwlrbgqu3','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-04-01 19:04:01'),('6gmuzthlo48t2peb977iks81l1ziw57e','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-03-13 16:23:33'),('7hn40r13vz1awcn6d05bn0z37bqwv2v1','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-03-10 18:30:02'),('apwhklrz9e6yr2t9vwg3p7b6asd10qlv','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-03-14 21:37:18'),('b5pgd63qzwg36icb8d60a5x07apr17zy','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-02-11 18:12:50'),('bg4n5onfitknxo10cuuubk90n8w6d87n','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-03-05 21:31:13'),('dk3053p4l4aw5qtjj73l19i3q7leiqm3','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-12-31 19:55:09'),('hc01ss1d9zpj3dew52yuvn8tw7gq5qj1','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-12-10 19:54:29'),('jez8a3j7vuydvkz10ki4qgam9mhr6ziz','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-02-25 23:51:48'),('jfuccnbmovbdnfry9qc17d3ajn2ptb6t','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-04-15 23:25:47'),('jmnvz3fv7ptxsrfqgdl1gvsow3ys9dok','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-11-06 23:37:19'),('jt70ze7oy0lnnqjo0pkekotv83z396b5','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-02-05 02:17:55'),('k74p4o2e2xlx2vf98880slv1nrhculpd','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-04-08 21:40:25'),('kqlj4i932y6xtvon19uqtepd4uzcvd9x','YmQxZWRjNjJmZjk3NDkyNGVmNTQ4ZjAzNzJiOTVmYzYyMDlkYzhlYTqAAn1xAVgKAAAAdGVzdGNvb2tpZXECWAYAAAB3b3JrZWRxA3Mu','2013-11-01 16:45:11'),('lbqh63lmf5iupcejibbt0mp4wdyva0ac','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-04-01 18:30:38'),('lkokjpmw8ag3h9mmqvk35n072eug2irh','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-04-14 22:55:03'),('mqllzxkgmgqqnwjwp7997zhwq1b2qkc1','MWE0NTczMmE1MWQxZjZjZGMwZGM5NWE3MTJiN2JjNThhZWUzYjU2YTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==','2013-09-04 22:22:50'),('n7p9gx5d9m6ww7lhbk0abx1bdcvs7pfv','MWE0NTczMmE1MWQxZjZjZGMwZGM5NWE3MTJiN2JjNThhZWUzYjU2YTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==','2013-09-19 19:48:15'),('ndl4tdu4eteld6g7s2qms6vqf4ii9w7l','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-02-24 18:22:58'),('nu4vcpxjh1lhigorxofyx9a306tho181','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-03-11 16:04:32'),('ov3b9g8o4ndvy23rexof67b59hx95sip','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-11-15 16:57:24'),('p0abyrd5hc0kkstwakylnplqeywrj7vm','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-09-18 22:13:04'),('pgplluwrqnc9tmjjpi9itgipyexbyb3i','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-10-03 22:50:22'),('qfbdwkgx8r96n9502ny8pq1mb2e1vbfw','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2013-12-03 23:03:36'),('qld5ey8jwiuilwvwo5qori6zb0sbur32','ZTJiY2ViMDBiYWE4NzEzZDcxNTY1NThmNGQwYjdjMDFmYzJkMzdhNjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==','2014-03-24 21:20:15'),('qye18ia8xjxsrgfc3l0isopb6dd04ttj','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2014-03-14 21:33:22'),('routct4lf2i5lvcpes0w9gplfllgsqx8','OTc4OTc1NWZhODcxMGZhYTg3ODY5YWJjMjFhODU1ZDg1ODdhMDM2ODqAAn1xAVgKAAAAdGVzdGNvb2tpZVgGAAAAd29ya2VkcQJzLg==','2013-10-23 19:43:09'),('s0e44pnjaohrxext7w6rxxhfw9k0ly7k','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2014-04-16 16:02:11'),('shpxw60s6pabkrhd87hw99vefljkx2gs','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-11-14 22:29:08'),('tcj0agdvep8a9x0jl324qbixh73dvlhb','MjlmMzg2MmViMDY5MzMzYjAzMTQxNjU2MWQxZThiYjllNGNjMzYzODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQJ1Lg==','2013-09-18 22:13:00'),('yv5fymujj819mf4zhd2vhva8ckl5fokb','ODgzYjE4ZjQzZWEyZGRjODYwYTI3Nzc1ODU3YTk3YzdjMWRmN2Y4MjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==','2013-10-17 18:20:57');
+/*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_site`
+--
+
+DROP TABLE IF EXISTS `django_site`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `domain` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_site`
+--
+
+LOCK TABLES `django_site` WRITE;
+/*!40000 ALTER TABLE `django_site` DISABLE KEYS */;
+INSERT INTO `django_site` VALUES (1,'example.com','example.com');
+/*!40000 ALTER TABLE `django_site` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_geologicalcategory`
+--
+
+DROP TABLE IF EXISTS `mnch_geologicalcategory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_geologicalcategory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `icon` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `mnch_geologicalcategory_55f56498` (`is_active`),
+  KEY `mnch_geologicalcategory_0c98d849` (`created_by_id`),
+  KEY `mnch_geologicalcategory_3aeaff6a` (`updated_by_id`),
+  CONSTRAINT `created_by_id_refs_id_683f3bd5` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_683f3bd5` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_geologicalcategory`
+--
+
+LOCK TABLES `mnch_geologicalcategory` WRITE;
+/*!40000 ALTER TABLE `mnch_geologicalcategory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mnch_geologicalcategory` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_geologicalsite`
+--
+
+DROP TABLE IF EXISTS `mnch_geologicalsite`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_geologicalsite` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `mnch_geologicalsite_55f56498` (`is_active`),
+  KEY `mnch_geologicalsite_0c98d849` (`created_by_id`),
+  KEY `mnch_geologicalsite_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_geologicalsite_6f33f001` (`category_id`),
+  CONSTRAINT `category_id_refs_id_ba8bfd66` FOREIGN KEY (`category_id`) REFERENCES `mnch_geologicalcategory` (`id`),
+  CONSTRAINT `created_by_id_refs_id_c60125e5` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_c60125e5` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_geologicalsite`
+--
+
+LOCK TABLES `mnch_geologicalsite` WRITE;
+/*!40000 ALTER TABLE `mnch_geologicalsite` DISABLE KEYS */;
+INSERT INTO `mnch_geologicalsite` VALUES (3,1,'2013-08-22 20:40:35','2014-04-01 21:42:39',NULL,2,NULL,42.9311161181,-122.118640652,'Crater Lake National Park','<p>Crater Lake National Park is a <a href=\"http://en.wikipedia.org/wiki/United_States_National_Park\" title=\"United States National Park\">United States National Park</a> located in <a href=\"http://en.wikipedia.org/wiki/Southern_Oregon\" title=\"Southern Oregon\">southern Oregon</a>. Established in 1902, Crater Lake National Park is the fifth oldest national park in the <a href=\"http://en.wikipedia.org/wiki/United_States\" title=\"United States\">United States</a> and the only one in the state of<a href=\"http://en.wikipedia.org/wiki/Oregon\" title=\"Oregon\">Oregon</a>.<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-nps-3\">[3]</a> The park encompasses the <a href=\"http://en.wikipedia.org/wiki/Caldera\" title=\"Caldera\">caldera</a> of <a href=\"http://en.wikipedia.org/wiki/Crater_Lake\" title=\"Crater Lake\">Crater Lake</a>, a remnant of a destroyed <a href=\"http://en.wikipedia.org/wiki/Volcano\" title=\"Volcano\">volcano</a> <a href=\"http://en.wikipedia.org/wiki/Mount_Mazama\" title=\"Mount Mazama\">Mount Mazama</a>, and the surrounding hills and forests.</p>\r\n\r\n<p>The lake is 1,943 feet (592 m) deep at its deepest point,<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-deepest-4\">[4]</a> which makes it the deepest lake in the United States, the second deepest in North America and the <a href=\"http://en.wikipedia.org/wiki/List_of_lakes_by_depth\" title=\"List of lakes by depth\">ninth deepest</a> in the world.<a href=\"http://en.wikipedia.org/wiki/Crater_Lake_National_Park#cite_note-deepest-4\">[4]</a> Crater Lake is often referred to as the seventh deepest lake in the world, but this former listing excludes the approximately 3,000-foot (910 m) depth of subglacial <a href=\"http://en.wikipedia.org/wiki/Lake_Vostok\" title=\"Lake Vostok\">Lake Vostok</a> in Antarctica, which resides under nearly 13,000 feet (4,000 m) of ice, and the recent report of a 2,740-foot (840 m) maximum depth for <a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Lake_O%27Higgins\" title=\"Lake O\'Higgins\">Lake O&#39;Higgins</a>/San Martin, located on the border of Chile and Argentina. However, when comparing its average depth of 1,148 feet (350 m) to the average depth of other deep lakes, Crater Lake becomes the deepest in the Western Hemisphere and the third deepest in the world. The impressive average depth of this volcanic lake is due to the nearly symmetrical 4,000-foot (1,200 m) deep caldera formed 7,700 years ago during the violent climactic eruptions and subsequent collapse of Mount Mazama and the relatively moist climate that is typical of the crest of the <a href=\"http://en.wikipedia.org/wiki/Cascade_Range\" title=\"Cascade Range\">Cascade Range</a>.</p>'),(4,1,'2013-08-22 21:04:59','2014-04-01 21:42:32',NULL,NULL,NULL,44.997994,-120.2146906,'John Day Fossil Beds','<p><strong>John Day Fossil Beds National Monument</strong>&nbsp;is a&nbsp;<a href=\"http://en.wikipedia.org/wiki/National_Monument_(United_States)\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"National Monument (United States)\">U.S. National Monument</a>&nbsp;in&nbsp;<a href=\"http://en.wikipedia.org/wiki/Wheeler_County,_Oregon\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Wheeler County, Oregon\">Wheeler</a>&nbsp;and&nbsp;<a href=\"http://en.wikipedia.org/wiki/Grant_County,_Oregon\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Grant County, Oregon\">Grant</a>&nbsp;counties in east-central&nbsp;<a href=\"http://en.wikipedia.org/wiki/Oregon\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Oregon\">Oregon</a>. Located within the&nbsp;<a href=\"http://en.wikipedia.org/wiki/John_Day_River\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"John Day River\">John Day River</a>&nbsp;basin and managed by the&nbsp;<a href=\"http://en.wikipedia.org/wiki/National_Park_Service\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"National Park Service\">National Park Service</a>, the park is known for its well-preserved layers of&nbsp;<a href=\"http://en.wikipedia.org/wiki/Fossil\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Fossil\">fossil</a>&nbsp;plants and&nbsp;<a href=\"http://en.wikipedia.org/wiki/Mammal\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Mammal\">mammals</a>&nbsp;that lived in the region between the late&nbsp;<a href=\"http://en.wikipedia.org/wiki/Eocene\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Eocene\">Eocene</a>, about 44&nbsp;million years ago, and the late&nbsp;<a href=\"http://en.wikipedia.org/wiki/Miocene\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Miocene\">Miocene</a>, about 7&nbsp;million years ago. The monument consists of three geographically separate units: Sheep Rock, Painted Hills, and Clarno.</p>\r\n\r\n<p>The units cover a total of 13,944 acres (5,643&nbsp;ha) of semi-desert shrublands,&nbsp;<a href=\"http://en.wikipedia.org/wiki/Riparian_zone\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Riparian zone\">riparian zones</a>, and colorful<a href=\"http://en.wikipedia.org/wiki/Badlands\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Badlands\">badlands</a>. About 125,000 people visit the park each year for outdoor activities such as hiking and sightseeing or to visit the Thomas Condon Paleontology Center or the&nbsp;<a href=\"http://en.wikipedia.org/wiki/James_Cant_Ranch_Historic_District\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"James Cant Ranch Historic District\">James Cant Ranch Historic District</a>.</p>\r\n\r\n<p>Before the arrival of Euro-Americans in the 19th&nbsp;century, the John Day basin was frequented by&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Sahaptin_people\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Sahaptin people\">Sahaptin people</a>&nbsp;who hunted, fished, and gathered roots and berries in the region. After road-building made the valley more accessible, settlers established farms, ranches, and a few small towns along the river and its tributaries.&nbsp;<a href=\"http://en.wikipedia.org/wiki/Paleontology\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Paleontology\">Paleontologists</a>&nbsp;have been unearthing and studying the fossils in the region since 1864, when<a href=\"http://en.wikipedia.org/wiki/Thomas_Condon\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Thomas Condon\">Thomas Condon</a>, a missionary and amateur geologist, recognized their importance and made them known globally. Parts of the basin became a National Monument in 1975.</p>\r\n\r\n<p>Averaging about 2,200 feet (670&nbsp;m) in elevation, the monument has a dry climate with temperatures that vary from summer highs of about&nbsp;90 &deg;F&nbsp;(32&nbsp;&deg;C)&nbsp;to winter lows below freezing. The monument has more than 80 soil types that support a wide variety of flora, ranging from willow trees near the river to grasses on&nbsp;<a href=\"http://en.wikipedia.org/wiki/Alluvial_fan\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Alluvial fan\">alluvial fans</a>&nbsp;to cactus among rocks at higher elevations. Fauna include more than 50 species of resident and migratory birds. Large mammals like&nbsp;<a href=\"http://en.wikipedia.org/wiki/Elk\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Elk\">elk</a>&nbsp;and smaller animals such as&nbsp;<a href=\"http://en.wikipedia.org/wiki/Raccoon\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Raccoon\">raccoons</a>,&nbsp;<a href=\"http://en.wikipedia.org/wiki/Coyote\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Coyote\">coyotes</a>, and&nbsp;<a class=\"mw-redirect\" href=\"http://en.wikipedia.org/wiki/Voles\" style=\"color: rgb(11, 0, 128); text-decoration: none; background-image: none;\" title=\"Voles\">voles</a>&nbsp;frequent these units, which are also populated by a wide variety of reptiles, fish, butterflies, and other creatures adapted to particular niches of a mountainous semi-desert terrain.</p>'),(5,1,'2013-09-05 18:11:44','2014-04-01 21:42:18',NULL,NULL,NULL,44.070444,-121.278076,'Fake Location','<p>This is a super cool, but fake location.</p>'),(6,1,'2013-09-05 18:18:27','2013-10-02 21:57:11',NULL,NULL,NULL,44.1013930644985,-123.097686767578,'My house','<p>This is my house, in the middle of my street.</p>'),(7,1,'2013-10-03 20:31:07','2014-04-01 21:42:09',NULL,NULL,NULL,42.096184,-123.403269,'Oregon Caves National Monument','<p><a href=\"http://www.nps.gov/orca/‎\">Oregon Caves</a> was first discovered in 1874 by Elijah Davidson, who was in the mountains hunting bear. The cave was developed as a tourist destination shortly after, and in 1909 the Monument was established by President Taft. The Monument was controlled by the Forest Service until it was transferred to Park Service hands in the 1930s. The Park Service took over tours from the concession in 2001.</p>'),(8,0,'2014-02-25 19:12:05','2014-04-01 21:40:41',NULL,NULL,NULL,44.0423010368,-123.070558906,'Hayward Field','<p>Hayward Field - Run for the Cure</p>');
+/*!40000 ALTER TABLE `mnch_geologicalsite` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_geologicalsitecomment`
+--
+
+DROP TABLE IF EXISTS `mnch_geologicalsitecomment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_geologicalsitecomment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `status` varchar(32) NOT NULL,
+  `site_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  `num_likes` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `mnch_geologicalsitecomment_55f56498` (`is_active`),
+  KEY `mnch_geologicalsitecomment_0c98d849` (`created_by_id`),
+  KEY `mnch_geologicalsitecomment_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_geologicalsitecomment_99732b5c` (`site_id`),
+  CONSTRAINT `created_by_id_refs_id_36f6824f` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `site_id_refs_id_86309922` FOREIGN KEY (`site_id`) REFERENCES `mnch_geologicalsite` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_36f6824f` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_geologicalsitecomment`
+--
+
+LOCK TABLES `mnch_geologicalsitecomment` WRITE;
+/*!40000 ALTER TABLE `mnch_geologicalsitecomment` DISABLE KEYS */;
+INSERT INTO `mnch_geologicalsitecomment` VALUES (1,1,'2013-08-27 21:07:43','2014-03-05 23:33:52',NULL,NULL,'approved',3,'Adam','This is a great thing to do',14),(2,1,'2013-09-05 17:50:45','2013-09-05 18:06:13',NULL,NULL,'denied',3,'asdasdas','This is a test tip!',1),(3,1,'2013-09-05 17:50:49','2013-09-05 18:06:11',NULL,NULL,'denied',3,'asdasdas','This is a test tip!',1),(4,1,'2013-09-05 17:52:18','2013-09-05 18:06:14',NULL,NULL,'denied',3,'Adam','Barton',2),(5,1,'2013-09-05 18:08:28','2013-09-05 18:08:28',NULL,NULL,'denied',3,'Chocolate Rain','I love when it rains chocolate at Crater Lake',0),(7,1,'2013-09-06 19:47:47','2013-09-06 19:47:47',NULL,NULL,'denied',5,'asd','asdasdas',0),(8,1,'2013-09-06 19:50:29','2014-03-25 21:55:41',NULL,NULL,'approved',4,'Bobs','Youruncle',7),(9,1,'2013-09-10 18:27:01','2014-01-13 18:03:54',NULL,NULL,'approved',6,'Johnny','I love my house. I love my house so much that I want to live there.',4),(10,1,'2013-09-10 18:28:49','2014-01-13 18:03:56',NULL,NULL,'approved',6,'Babs','This is a dangerous house, full of dangerous things.',5),(11,1,'2013-09-19 17:35:15','2013-09-19 17:35:15',NULL,NULL,'pending',5,'Becky','I love! fake location',0),(12,1,'2013-10-02 21:27:49','2013-10-02 21:27:49',NULL,NULL,'pending',3,'Wiggins','I also love doing things.',0),(13,1,'2013-10-03 18:09:03','2014-03-25 21:55:34',NULL,NULL,'approved',4,'digger','i like fossils',7),(14,1,'2013-10-23 22:10:08','2013-10-23 22:10:08',NULL,NULL,'pending',7,'Chucky',' cheese',0),(15,1,'2013-10-24 17:58:49','2013-10-24 17:58:49',NULL,NULL,'pending',4,'poo','gdjwoenck fiemejedkx',0),(16,1,'2013-10-31 22:07:10','2013-10-31 22:07:10',NULL,NULL,'pending',6,'johnny','klio',0),(17,1,'2013-10-31 22:07:32','2013-10-31 22:07:32',NULL,NULL,'pending',6,'pooiillkk','jhggttre',0),(18,1,'2013-12-17 19:54:59','2014-02-24 22:58:14',NULL,NULL,'approved',4,'Adam Barton','This is a longer tip - we are trying to see what happens once a tip breaks multiple lines',8),(19,1,'2013-12-17 20:38:57','2013-12-17 20:38:57',NULL,NULL,'pending',3,'asdasdas','asdasdasihsfkjashd iouas ausdhia sNC asiud awBDAUWYIA IUHDSA',0),(20,1,'2013-12-17 20:42:41','2013-12-17 20:42:41',NULL,NULL,'pending',4,'adam','test',0),(21,1,'2013-12-17 20:44:03','2013-12-17 20:44:03',NULL,NULL,'pending',4,'ADAM BAERTON','HRDDJkjsdheééwekfeéjwé',0),(22,1,'2013-12-17 20:45:36','2013-12-17 20:45:36',NULL,NULL,'pending',7,'Adam ','I love oregon cavess',0),(23,1,'2014-01-13 18:04:28','2014-01-13 18:04:28',NULL,NULL,'pending',6,'Peyton Manning','Oh, yes I\'ve been to this house and it rivals my own house style and aesthetics',0),(24,1,'2014-01-13 18:06:21','2014-01-13 18:06:21',NULL,NULL,'pending',4,'bobbynjohnny','we love dinosaurs',0),(25,1,'2014-01-13 18:09:19','2014-01-13 18:09:19',NULL,NULL,'pending',3,'greg little','gooooo ducks',0),(26,1,'2014-01-13 18:10:03','2014-01-13 18:10:03',NULL,NULL,'pending',3,'bop bo bee','JOOOOOOOOOHnny',0),(27,1,'2014-01-13 18:11:27','2014-01-13 18:11:27',NULL,NULL,'pending',7,'karl krammit','this is my favorite place to go',0),(28,1,'2014-01-20 17:46:18','2014-01-20 17:46:18',NULL,NULL,'pending',4,'Taco Bell','IJhesklad',0),(29,1,'2014-01-22 02:23:21','2014-01-22 02:23:21',NULL,NULL,'pending',3,'Dan','I love this place!',0),(30,1,'2014-01-22 02:49:17','2014-02-19 22:21:46',NULL,NULL,'pending',5,'Dan','That\'s super-fake, brother!',0),(31,1,'2014-01-22 02:50:05','2014-01-22 02:50:05',NULL,NULL,'denied',4,'Dam','pfkw]w',0),(32,1,'2014-02-19 21:12:23','2014-02-19 21:12:23',NULL,NULL,'denied',3,'Ann','Make sure to go in the summer to see eagles.',0),(34,1,'2014-02-19 21:34:30','2014-02-22 01:10:43',NULL,NULL,'approved',3,'Ann','I love national parks',1),(35,1,'2014-02-19 23:09:16','2014-02-19 23:09:16',NULL,NULL,'denied',6,'GingerKid','I don\'t think this really your house. ',0),(36,1,'2014-02-25 18:24:42','2014-02-25 18:24:42',NULL,NULL,'pending',6,'Ann','Nice house',0),(37,1,'2014-02-27 19:34:05','2014-02-27 19:34:05',NULL,NULL,'pending',4,'Ima Dog','If your happy and you know, dig up bones.',0),(38,1,'2014-03-24 16:09:48','2014-03-24 16:09:48',NULL,NULL,'pending',5,'tables','i love tables',0),(39,1,'2014-03-25 21:54:11','2014-03-25 21:55:14',NULL,NULL,'approved',7,'Trippy','Bring good hiking shoes for the walk!',1),(41,1,'2014-04-01 00:25:58','2014-04-01 00:25:58',NULL,NULL,'pending',3,'Dann','Tiptiptip',0);
+/*!40000 ALTER TABLE `mnch_geologicalsitecomment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_geologicalsitephoto`
+--
+
+DROP TABLE IF EXISTS `mnch_geologicalsitephoto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_geologicalsitephoto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `status` varchar(32) NOT NULL,
+  `site_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `photo` varchar(100) NOT NULL,
+  `credits` varchar(255) NOT NULL,
+  `position` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `mnch_geologicalsitephoto_55f56498` (`is_active`),
+  KEY `mnch_geologicalsitephoto_0c98d849` (`created_by_id`),
+  KEY `mnch_geologicalsitephoto_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_geologicalsitephoto_99732b5c` (`site_id`),
+  CONSTRAINT `created_by_id_refs_id_af7572c4` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `site_id_refs_id_2822a43d` FOREIGN KEY (`site_id`) REFERENCES `mnch_geologicalsite` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_af7572c4` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_geologicalsitephoto`
+--
+
+LOCK TABLES `mnch_geologicalsitephoto` WRITE;
+/*!40000 ALTER TABLE `mnch_geologicalsitephoto` DISABLE KEYS */;
+INSERT INTO `mnch_geologicalsitephoto` VALUES (8,1,'2013-08-22 20:59:43','2014-02-22 01:14:43',NULL,NULL,'approved',3,'Crate Lake at Night','geologicalsitephoto/576b2eb543dc10fe21e182aa3673e3f4_4.png','John Williams',99),(9,1,'2013-08-22 21:02:56','2013-08-22 21:02:56',NULL,NULL,'approved',3,'','geologicalsitephoto/4b21554690bb9e3316ac944ec6d10f9e.png','',99),(10,1,'2013-08-22 21:04:59','2013-09-06 19:54:01',NULL,NULL,'approved',4,'','geologicalsitephoto/0ea78a32f890f7f0a9f4472184c8d2b0.png','',99),(11,1,'2013-09-05 18:12:44','2013-09-05 19:55:08',NULL,NULL,'approved',5,'','geologicalsitephoto/a9caa356c57107b64b60c463aaa83aac_1.png','',1),(12,1,'2013-09-05 18:18:27','2013-09-05 22:48:20',NULL,NULL,'approved',6,'','geologicalsitephoto/41c101f4e216e6dbb14344c226fec341.png','',99),(14,1,'2013-09-19 22:51:39','2014-03-25 21:58:10',NULL,NULL,'denied',3,'','geologicalsitephoto/49000c1859026951ca68a12fee4226f2.png','',99),(15,1,'2013-10-03 19:34:50','2013-10-03 19:34:50',NULL,NULL,'approved',6,'back yard','geologicalsitephoto/back-yard.png','bubs',99),(16,1,'2013-10-03 20:31:07','2014-03-25 21:44:00',NULL,NULL,'approved',7,'Oregon Cave Entrance','geologicalsitephoto/oregon-cave-entrance.png','National Park Service',2),(17,1,'2013-10-03 20:31:07','2014-03-25 21:44:00',NULL,NULL,'approved',7,'Oregon Cave Interior','geologicalsitephoto/oregon-cave-interior.png','National Park Service',1),(18,1,'2013-12-17 20:11:19','2013-12-17 20:11:19',NULL,NULL,'approved',4,'Jones','geologicalsitephoto/jones.png','Bobby',99),(19,1,'2014-02-19 21:10:50','2014-02-19 21:10:50',NULL,NULL,'approved',3,'Crater Lake in the morning','geologicalsitephoto/crater-lake-in-the-morning.png','Ann Craig',99),(20,1,'2014-02-27 16:24:09','2014-02-27 16:24:09',NULL,NULL,'approved',8,'Hayward Field','geologicalsitephoto/hayward-field.png','Adam Barton',1),(21,1,'2014-03-13 20:27:46','2014-03-25 21:57:22',NULL,NULL,'approved',3,'Crater Photo','geologicalsitephoto/crater-photo.png','',99),(22,1,'2014-03-25 23:12:34','2014-03-25 23:15:05',NULL,NULL,'approved',7,'cave bats','geologicalsitephoto/cave-bats.png','tester',99),(23,1,'2014-04-01 00:26:10','2014-04-01 00:26:10',NULL,NULL,'pending',3,'Foto','geologicalsitephoto/foto.png','Dann',99),(24,1,'2014-04-01 21:38:21','2014-04-01 21:38:21',NULL,NULL,'pending',4,'test','geologicalsitephoto/test.png','test',99);
+/*!40000 ALTER TABLE `mnch_geologicalsitephoto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_geologicalsiteresource`
+--
+
+DROP TABLE IF EXISTS `mnch_geologicalsiteresource`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_geologicalsiteresource` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `site_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `position` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `mnch_geologicalsiteresource_55f56498` (`is_active`),
+  KEY `mnch_geologicalsiteresource_0c98d849` (`created_by_id`),
+  KEY `mnch_geologicalsiteresource_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_geologicalsiteresource_99732b5c` (`site_id`),
+  CONSTRAINT `created_by_id_refs_id_43cd7447` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `site_id_refs_id_d7ac8641` FOREIGN KEY (`site_id`) REFERENCES `mnch_geologicalsite` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_43cd7447` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_geologicalsiteresource`
+--
+
+LOCK TABLES `mnch_geologicalsiteresource` WRITE;
+/*!40000 ALTER TABLE `mnch_geologicalsiteresource` DISABLE KEYS */;
+INSERT INTO `mnch_geologicalsiteresource` VALUES (1,1,'2013-09-09 18:06:06','2013-09-09 18:06:06',NULL,NULL,3,'Wikipedia','http://www.wikipedia.org/',1),(2,1,'2013-09-09 18:06:06','2013-09-09 18:06:06',NULL,NULL,3,'National Geographic','http://www.nationalgeographic.com/',2),(3,1,'2014-02-03 17:54:01','2014-02-03 17:54:01',NULL,NULL,7,'Taco Bell','http://tacobell.com/',10);
+/*!40000 ALTER TABLE `mnch_geologicalsiteresource` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_venue`
+--
+
+DROP TABLE IF EXISTS `mnch_venue`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_venue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `zipcode` varchar(255) NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  `photo` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `mnch_venue_55f56498` (`is_active`),
+  KEY `mnch_venue_0c98d849` (`created_by_id`),
+  KEY `mnch_venue_3aeaff6a` (`updated_by_id`),
+  CONSTRAINT `created_by_id_refs_id_f3bcbfc7` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_f3bcbfc7` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_venue`
+--
+
+LOCK TABLES `mnch_venue` WRITE;
+/*!40000 ALTER TABLE `mnch_venue` DISABLE KEYS */;
+INSERT INTO `mnch_venue` VALUES (1,1,'2013-09-05 22:50:06','2013-09-05 22:50:06',NULL,NULL,'Willamette State Forest','123 Imaginary Ln','Eugene','Oregon','02313',44.0007178342828,-122.23388671875,''),(2,1,'2013-09-05 22:51:10','2014-02-22 00:29:17',NULL,NULL,'Steens Mountain','','','','',42.5368920079,-118.4765625,''),(3,1,'2013-09-06 20:01:34','2014-03-06 23:46:20',NULL,NULL,'Lake Rake','','','','',44.0910373396,-123.298187256,'venue/lake-rake.png'),(4,1,'2013-10-03 21:35:41','2014-03-06 23:46:10',NULL,NULL,'South Beach','5580 S Coast Hwy','Newport','Oregon','',44.59906,-124.058884,'venue/south-beach.png'),(5,1,'2014-02-22 00:37:11','2014-03-25 22:01:29',NULL,NULL,'Sheldon High School','2455 Willakenzie Rd','Eugene','OR','97401',44.0937497285,-123.030567169,'venue/sheldon-high-school.png'),(6,1,'2014-02-22 00:38:04','2014-02-22 00:38:04',NULL,NULL,'SE High School','400 E 19th Ave','Eugene','OR','97401',44.1171697294209,-120.844116210938,''),(7,1,'2014-02-25 18:55:08','2014-02-25 18:57:02',NULL,NULL,'River Clean up','','','','',44.0165213439,-124.12902832,''),(8,1,'2014-02-25 18:57:10','2014-02-25 18:57:10',NULL,NULL,'test','','','','',45.641631,-122.828963,''),(9,1,'2014-02-25 19:18:42','2014-03-07 19:12:21',NULL,NULL,'PDG','1010 Obie Street','Eugene','OR','97402',44.048632,-123.151386,'venue/pdg.png'),(10,1,'2014-02-26 04:50:13','2014-03-25 21:48:20',NULL,NULL,'Eagle Cap Wilderness','','LaGrande','OR','',45.242092,-117.442698,'venue/eagle-cap-wilderness.png');
+/*!40000 ALTER TABLE `mnch_venue` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_volunteercategory`
+--
+
+DROP TABLE IF EXISTS `mnch_volunteercategory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_volunteercategory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `icon` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `mnch_volunteercategory_55f56498` (`is_active`),
+  KEY `mnch_volunteercategory_0c98d849` (`created_by_id`),
+  KEY `mnch_volunteercategory_3aeaff6a` (`updated_by_id`),
+  CONSTRAINT `created_by_id_refs_id_a1932458` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_a1932458` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_volunteercategory`
+--
+
+LOCK TABLES `mnch_volunteercategory` WRITE;
+/*!40000 ALTER TABLE `mnch_volunteercategory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mnch_volunteercategory` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_volunteeropportunity`
+--
+
+DROP TABLE IF EXISTS `mnch_volunteeropportunity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_volunteeropportunity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `venue_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `mnch_volunteeropportunity_55f56498` (`is_active`),
+  KEY `mnch_volunteeropportunity_0c98d849` (`created_by_id`),
+  KEY `mnch_volunteeropportunity_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_volunteeropportunity_6f33f001` (`category_id`),
+  KEY `mnch_volunteeropportunity_03eb0938` (`venue_id`),
+  CONSTRAINT `category_id_refs_id_838c1cb6` FOREIGN KEY (`category_id`) REFERENCES `mnch_volunteercategory` (`id`),
+  CONSTRAINT `created_by_id_refs_id_7cb28b92` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_7cb28b92` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `venue_id_refs_id_e02859aa` FOREIGN KEY (`venue_id`) REFERENCES `mnch_venue` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_volunteeropportunity`
+--
+
+LOCK TABLES `mnch_volunteeropportunity` WRITE;
+/*!40000 ALTER TABLE `mnch_volunteeropportunity` DISABLE KEYS */;
+INSERT INTO `mnch_volunteeropportunity` VALUES (3,1,'2013-09-06 20:02:02','2013-09-06 20:02:02',NULL,NULL,NULL,3,'This is the lake rake','2013-09-19','','','<p>Lorem ipsum ipsum sipsum</p>'),(4,1,'2013-10-03 21:35:49','2014-03-07 20:30:58',NULL,NULL,NULL,4,'SOLVE Beach and Riverside Cleanup','2013-10-12','10am - 1pm','Freee','<p>Due to severe weather, all coastal sites were postponed during the <a href=\"http://www.solv.org/what-we-do/solve-beach-and-riverside-cleanup\">Beach &amp; Riverside Cleanup</a> on September 28. Rescheduled cleanups will take place October 12th and 26th.</p>\r\n\r\n<p>Volunteers are needed now more than ever as the storms like these wash marine debris onto the coastlines. Cleanups will take place rain or shine. If you have any questions about volunteering for a particular cleanup, please call Kaleen Boyle at 503-844-9571 ext. 332 or email&nbsp;<a href=\"mailto:kaleen@solveoregon.org\">kaleen@solveoregon.org</a>.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>OCTOBER 12, 2013</strong></p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/netarts-bay-boat-ramp-cleanup-rescheduled\">Netarts Bay Boat Ramp Cleanup</a>, Netarts</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/pelican-pub-cleanup-rescheduled\">Pelican Pub Cleanup</a>, Tillamook</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/wi-ne-ma-wayside-cleanup-rescheduled\">Wi-Ne-Ma Wayside Cleanup</a>, Neskowin</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/neskowin-trading-company-fromerly-marketplace-porch-cleanup-rescheduled\">Neskowin Trading Company (formerly Marketplace Porch) Cleanup</a>, Neskowin</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/south-beach-state-park-cleanup-rescheduled\">South Beach State Park Cleanup</a>, Newport area</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/lost-creek-state-park-cleanup-rescheduled\">Lost Creek State Park Cleanup</a>, Newport area</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/ona-beach-state-park-cleanup-rescheduled\">Ona Beach State Park Cleanup</a>, Newport area</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/alsea-bay-bridge-interpretive-center-cleanup-rescheduled\">Alsea Bay Bridge Interpretive Center Beach Cleanup</a>, Waldport</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/yachats-chamber-commerce-cleanup-rescheduled\">Yachats Chamber of Commerce Beach Cleanup</a>, Yachats</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/bastendorff-beach-park-cleanup-rescheduled\">Bastendorff Beach Park Cleanup</a>, Charleston</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/barn-bandon-beach-cleanup-rescheduled\">Bandon &quot;The Barn&quot; Beach Cleanup</a>, Bandon&nbsp;</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/battle-rock-state-wayside-cleanup-rescheduled\">Battle Rock Wayside Cleanup</a>, Port Orford</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/ophir-state-recreation-site-cleanup-rescheduled\">Ophir State Recreation Site Cleanup</a>, Port Orford</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>OCTOBER 26, 2013</strong></p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/fort-stevens-columbia-river-beach-cleanup-rescheduled\">Fort Stevens State Park - Columbia River Beach Cleanup</a>, Hammond</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/fort-stevens-shipwreck-beach-cleanup-rescheduled\">Fort Stevens State Park - Shipwreck/Peter Iredale Beach Cleanup</a>, Hammond</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/cannon-beach-city-hall-cleanup-rescheduled\">Cannon Beach City Hall Cleanup</a>, Cannon Beach</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/tolovana-wayside-cleanup-rescheduled\">Tolovana Wayside Cleanup</a>, Cannon Beach</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/devils-punch-bowl-state-natural-area-otter-rock-cleanup-rescheduled\">Devil&#39;s Punchbowl State Natural Area - Otter Rock Cleanup</a>, Depoe Bay</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/beverly-beach-state-park-cleanup-rescheduled\">Beverly Beach State Park Cleanup</a>, Newport</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/agate-beach-wayside-cleanup-rescheduled\">Agate Beach Wayside Cleanup</a>, Newport</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/nye-beach-turnaround-cleanup-rescheduled\">Nye Beach Turnaround Cleanup</a>, Newport</p>\r\n\r\n<p><a href=\"http://www.solveoregon.org/get-involved/events/yaquina-bay-state-park-cleanup-rescheduled\">Yaquina Bay State Park Cleanup</a>, Newport</p>'),(5,1,'2014-02-24 18:32:54','2014-02-24 18:32:54',NULL,NULL,NULL,1,'Raking Up Some Leaves','2014-02-28','','','<p>&nbsp;</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada, enim sed rutrum laoreet, orci lorem rutrum augue, in accumsan purus mauris a massa. Nunc aliquet sem eu nisi rutrum, et scelerisque orci auctor. Nulla facilisi. Quisque ipsum lorem, tincidunt non rutrum a, semper in mauris. Etiam adipiscing quam velit, a blandit velit condimentum quis. In dignissim est tortor, eleifend commodo magna accumsan non. Nam malesuada tincidunt orci, tincidunt dapibus erat. Etiam ac justo risus. Donec vitae accumsan felis, eget pharetra risus. Cras ut bibendum ipsum. Maecenas euismod leo convallis elit pellentesque, quis faucibus metus varius. Morbi nec nisl lectus. Nam eget volutpat turpis. Praesent faucibus eros eget ante egestas vehicula. Suspendisse placerat lacus malesuada lacus fermentum iaculis.</p>\r\n\r\n<p>Nam condimentum, justo accumsan lacinia dictum, erat risus vehicula tortor, et porta diam sapien id risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse eget fermentum nulla, at molestie erat. Fusce consequat augue sed faucibus dapibus. Donec cursus euismod ligula sed molestie. Morbi eget ligula condimentum velit posuere dictum. Ut id leo non lacus sagittis hendrerit in nec nisi. Nullam tellus quam, imperdiet vehicula odio nec, gravida dignissim velit.</p>\r\n\r\n<p>Sed fermentum augue ligula, a tincidunt urna ultrices ut. Nulla at sollicitudin diam. Vestibulum non lectus aliquet, sodales arcu eleifend, pharetra dolor. Vivamus turpis sem, mollis rhoncus dolor eu, accumsan volutpat nunc. Morbi tincidunt neque metus, a convallis neque accumsan quis. Etiam ac risus neque. Nulla ullamcorper mattis risus ac dignissim. Nullam metus lorem, pellentesque at convallis eget, faucibus ac lectus. Mauris vel semper velit. Aliquam non congue purus. Aliquam non neque at erat auctor aliquam. Donec id tincidunt ante. Donec dictum, tortor nec tincidunt ornare, sapien quam iaculis mi, et vestibulum diam lectus vitae enim. Nam consequat venenatis massa, nec porttitor turpis ullamcorper eget. Sed sed ultrices nulla. Nullam ullamcorper sapien sed mi mollis fermentum.</p>'),(6,1,'2014-02-24 18:33:53','2014-02-24 18:33:53',NULL,NULL,NULL,2,'Picking up trash','2014-02-24','','','<p>&nbsp;</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada, enim sed rutrum laoreet, orci lorem rutrum augue, in accumsan purus mauris a massa. Nunc aliquet sem eu nisi rutrum, et scelerisque orci auctor. Nulla facilisi. Quisque ipsum lorem, tincidunt non rutrum a, semper in mauris. Etiam adipiscing quam velit, a blandit velit condimentum quis. In dignissim est tortor, eleifend commodo magna accumsan non. Nam malesuada tincidunt orci, tincidunt dapibus erat. Etiam ac justo risus. Donec vitae accumsan felis, eget pharetra risus. Cras ut bibendum ipsum. Maecenas euismod leo convallis elit pellentesque, quis faucibus metus varius. Morbi nec nisl lectus. Nam eget volutpat turpis. Praesent faucibus eros eget ante egestas vehicula. Suspendisse placerat lacus malesuada lacus fermentum iaculis.</p>\r\n\r\n<p>Nam condimentum, justo accumsan lacinia dictum, erat risus vehicula tortor, et porta diam sapien id risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse eget fermentum nulla, at molestie erat. Fusce consequat augue sed faucibus dapibus. Donec cursus euismod ligula sed molestie. Morbi eget ligula condimentum velit posuere dictum. Ut id leo non lacus sagittis hendrerit in nec nisi. Nullam tellus quam, imperdiet vehicula odio nec, gravida dignissim velit.</p>\r\n\r\n<p>Sed fermentum augue ligula, a tincidunt urna ultrices ut. Nulla at sollicitudin diam. Vestibulum non lectus aliquet, sodales arcu eleifend, pharetra dolor. Vivamus turpis sem, mollis rhoncus dolor eu, accumsan volutpat nunc. Morbi tincidunt neque metus, a convallis neque accumsan quis. Etiam ac risus neque. Nulla ullamcorper mattis risus ac dignissim. Nullam metus lorem, pellentesque at convallis eget, faucibus ac lectus. Mauris vel semper velit. Aliquam non congue purus. Aliquam non neque at erat auctor aliquam. Donec id tincidunt ante. Donec dictum, tortor nec tincidunt ornare, sapien quam iaculis mi, et vestibulum diam lectus vitae enim. Nam consequat venenatis massa, nec porttitor turpis ullamcorper eget. Sed sed ultrices nulla. Nullam ullamcorper sapien sed mi mollis fermentum.</p>'),(7,0,'2014-02-25 19:19:46','2014-02-25 23:49:27',NULL,NULL,NULL,9,'Test','2014-05-15','','',''),(8,1,'2014-02-26 04:50:43','2014-02-26 04:50:43',NULL,NULL,NULL,10,'Back Country Hiking','2014-05-24','','Free',''),(10,1,'2014-02-26 04:52:20','2014-02-26 04:52:20',NULL,NULL,NULL,2,'Archaeological Dig','2014-04-18','3 Days','$250 per person',''),(11,1,'2014-03-06 20:39:06','2014-03-06 20:39:06',NULL,NULL,NULL,5,'Slough Restoration','2014-03-06','2-3 PM','free','');
+/*!40000 ALTER TABLE `mnch_volunteeropportunity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mnch_volunteeropportunityresource`
+--
+
+DROP TABLE IF EXISTS `mnch_volunteeropportunityresource`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mnch_volunteeropportunityresource` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `is_active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `position` int(10) unsigned NOT NULL,
+  `opportunity_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `mnch_volunteeropportunityresource_55f56498` (`is_active`),
+  KEY `mnch_volunteeropportunityresource_0c98d849` (`created_by_id`),
+  KEY `mnch_volunteeropportunityresource_3aeaff6a` (`updated_by_id`),
+  KEY `mnch_volunteeropportunityresource_af9eb496` (`opportunity_id`),
+  CONSTRAINT `opportunity_id_refs_id_9b81f636` FOREIGN KEY (`opportunity_id`) REFERENCES `mnch_volunteeropportunity` (`id`),
+  CONSTRAINT `created_by_id_refs_id_5a30246c` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_5a30246c` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mnch_volunteeropportunityresource`
+--
+
+LOCK TABLES `mnch_volunteeropportunityresource` WRITE;
+/*!40000 ALTER TABLE `mnch_volunteeropportunityresource` DISABLE KEYS */;
+INSERT INTO `mnch_volunteeropportunityresource` VALUES (1,1,'2014-03-07 20:30:58','2014-03-07 20:30:58',NULL,NULL,'Gewgle','http://www.google.com/',1,4),(2,1,'2014-03-07 20:30:58','2014-03-07 20:30:58',NULL,NULL,'Terrordactyl','http://www.amazon.com/Prehistoric-Pets-Terrordactyl-Interactive-Dinosaur/dp/B00383PNKS',2,4);
+/*!40000 ALTER TABLE `mnch_volunteeropportunityresource` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sky_redirects_domainredirect`
+--
+
+DROP TABLE IF EXISTS `sky_redirects_domainredirect`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sky_redirects_domainredirect` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `domain` varchar(1024) NOT NULL,
+  `redirect_to_id` int(11) NOT NULL,
+  `redirect_type` varchar(1024) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sky_redirects_domainredirect_0a1694a1` (`redirect_to_id`),
+  CONSTRAINT `redirect_to_id_refs_id_cee7c66e` FOREIGN KEY (`redirect_to_id`) REFERENCES `django_site` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sky_redirects_domainredirect`
+--
+
+LOCK TABLES `sky_redirects_domainredirect` WRITE;
+/*!40000 ALTER TABLE `sky_redirects_domainredirect` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sky_redirects_domainredirect` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sky_redirects_regexpathredirect`
+--
+
+DROP TABLE IF EXISTS `sky_redirects_regexpathredirect`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sky_redirects_regexpathredirect` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `redirect_from` varchar(1024) NOT NULL,
+  `redirect_to` varchar(1024) NOT NULL,
+  `redirect_type` varchar(1024) NOT NULL,
+  `ordering` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sky_redirects_regexpathredirect`
+--
+
+LOCK TABLES `sky_redirects_regexpathredirect` WRITE;
+/*!40000 ALTER TABLE `sky_redirects_regexpathredirect` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sky_redirects_regexpathredirect` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sky_settings__basic_setting_model`
+--
+
+DROP TABLE IF EXISTS `sky_settings__basic_setting_model`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sky_settings__basic_setting_model` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sky_settings__basic_setting_model_0c98d849` (`created_by_id`),
+  KEY `sky_settings__basic_setting_model_3aeaff6a` (`updated_by_id`),
+  CONSTRAINT `created_by_id_refs_id_af547ee0` FOREIGN KEY (`created_by_id`) REFERENCES `auth_user` (`id`),
+  CONSTRAINT `updated_by_id_refs_id_af547ee0` FOREIGN KEY (`updated_by_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sky_settings__basic_setting_model`
+--
+
+LOCK TABLES `sky_settings__basic_setting_model` WRITE;
+/*!40000 ALTER TABLE `sky_settings__basic_setting_model` DISABLE KEYS */;
+INSERT INTO `sky_settings__basic_setting_model` VALUES (1,'2013-08-22 20:21:53','2014-01-28 18:13:04',NULL,NULL),(2,'2013-08-26 05:05:12','2013-08-26 05:05:12',NULL,NULL),(3,'2014-01-22 02:18:13','2014-01-22 02:18:13',NULL,NULL),(4,'2014-01-22 02:18:19','2014-01-22 02:18:19',NULL,NULL),(5,'2014-02-04 00:02:14','2014-02-05 18:24:31',NULL,NULL),(6,'2014-02-11 19:38:42','2014-02-14 01:52:20',NULL,NULL),(7,'2014-02-25 20:27:09','2014-02-28 21:34:10',NULL,NULL),(8,'2014-03-10 21:20:28','2014-03-18 18:30:00',NULL,NULL),(9,'2014-03-31 23:30:15','2014-04-01 00:32:03',NULL,NULL),(10,'2014-03-31 23:30:26','2014-04-01 00:31:48',NULL,NULL);
+/*!40000 ALTER TABLE `sky_settings__basic_setting_model` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sky_settings_setting`
+--
+
+DROP TABLE IF EXISTS `sky_settings_setting`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sky_settings_setting` (
+  `_basic_setting_model_ptr_id` int(11) NOT NULL,
+  `setting_type` varchar(16) NOT NULL,
+  `name` varchar(1024) NOT NULL,
+  `value` longtext NOT NULL,
+  `description` longtext NOT NULL,
+  PRIMARY KEY (`_basic_setting_model_ptr_id`),
+  CONSTRAINT `_basic_setting_model_ptr_id_refs_id_4c676b87` FOREIGN KEY (`_basic_setting_model_ptr_id`) REFERENCES `sky_settings__basic_setting_model` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sky_settings_setting`
+--
+
+LOCK TABLES `sky_settings_setting` WRITE;
+/*!40000 ALTER TABLE `sky_settings_setting` DISABLE KEYS */;
+INSERT INTO `sky_settings_setting` VALUES (1,'s','mapbox_api_key','mnch.map-sxs4axvl',''),(2,'s','default_location','44.04301, -123.06811',''),(3,'n','max_zoom','20',''),(4,'n','min_zoom','6',''),(5,'b','is_kiosk_display','0',''),(6,'s','kiosk_ip_addresses','0',''),(7,'s','oregon_border_color','#0077bd',''),(8,'b','auto_approve','0','Set to \"1\" to automatically approve all submitted photos and comments. Set to \"0\" to add them to the queue for manual approval.'),(9,'s','southwest_map_boundary','[38,-138]','Set this [latitude,longitude] as the lower-left boundary. Panning beyond this point (in either direction) will snap the map back.'),(10,'s','northeast_map_boundary','[50,-108]','Set this [latitude,longitude] as the upper-right boundary. Panning beyond this point (in either direction) will snap the map back.');
+/*!40000 ALTER TABLE `sky_settings_setting` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sky_visitor_inviteduser`
+--
+
+DROP TABLE IF EXISTS `sky_visitor_inviteduser`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sky_visitor_inviteduser` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(254) NOT NULL,
+  `status` varchar(32) NOT NULL,
+  `created_user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  KEY `sky_visitor_inviteduser_718cd2c8` (`created_user_id`),
+  CONSTRAINT `created_user_id_refs_id_354edbcf` FOREIGN KEY (`created_user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sky_visitor_inviteduser`
+--
+
+LOCK TABLES `sky_visitor_inviteduser` WRITE;
+/*!40000 ALTER TABLE `sky_visitor_inviteduser` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sky_visitor_inviteduser` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `south_migrationhistory`
+--
+
+DROP TABLE IF EXISTS `south_migrationhistory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `south_migrationhistory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_name` varchar(255) NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `applied` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `south_migrationhistory`
+--
+
+LOCK TABLES `south_migrationhistory` WRITE;
+/*!40000 ALTER TABLE `south_migrationhistory` DISABLE KEYS */;
+INSERT INTO `south_migrationhistory` VALUES (1,'mnch','0001_initial','2014-03-06 23:44:49'),(2,'mnch','0002_auto__add_field_venue_photo','2014-03-06 23:44:52'),(3,'mnch','0003_auto__add_volunteeropportunityresource','2014-03-07 20:29:12'),(4,'sky_settings','0001_initial','2014-03-18 18:27:53'),(5,'sky_settings','0002_auto__add_field_setting_description','2014-03-18 18:27:56');
+/*!40000 ALTER TABLE `south_migrationhistory` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-04-04  1:17:47
